@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan Trip — Monal · April–May 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dp:#4D1D91;--pm:#7011F6;--pl:#AB72FB;--pa:#F0EAFF;
+  --gn:#16a34a;--gnbg:#f0fdf4;--am:#d97706;--ambg:#fffbeb;
+  --bl:#2563eb;--blbg:#eff6ff;--rd:#dc2626;--rdbg:#fef2f2;
+  --pk:#ec4899;--pkbg:#fdf2f8;
+  --tx:#1a0a3c;--tm:#4a4a6a;--tl:#9090b0;
+  --bdr:rgba(112,17,246,.1);--sur:#f7f4ff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--sur);color:var(--tx);overflow-x:hidden}
+.hero{position:relative;height:100vh;min-height:580px;background:linear-gradient(150deg,#050010 0%,#160836 45%,#280d58 100%);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 12% 18%,rgba(255,255,255,.55) 0,transparent 100%),radial-gradient(1px 1px at 88% 8%,rgba(255,255,255,.45) 0,transparent 100%),radial-gradient(1px 1px at 55% 48%,rgba(255,255,255,.35) 0,transparent 100%),radial-gradient(1px 1px at 28% 72%,rgba(255,255,255,.4) 0,transparent 100%),radial-gradient(2px 2px at 44% 32%,rgba(171,114,251,.4) 0,transparent 100%),radial-gradient(1px 1px at 75% 85%,rgba(255,255,255,.25) 0,transparent 100%),radial-gradient(1px 1px at 35% 5%,rgba(255,255,255,.3) 0,transparent 100%)}
+.torii-svg{position:absolute;bottom:0;left:50%;transform:translateX(-50%);opacity:.055;width:min(650px,85vw)}
+.petal{position:absolute;border-radius:50% 0 50% 0;animation:fall linear infinite;pointer-events:none}
+@keyframes fall{0%{transform:translateY(-50px) rotate(0deg) scale(1);opacity:1}100%{transform:translateY(110vh) rotate(820deg) scale(.4);opacity:0}}
+.hi{position:relative;z-index:5;text-align:center;padding:2rem 1.5rem;animation:fu .85s ease both}
+@keyframes fu{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+.hero-flag{font-size:3.8rem;display:block;margin-bottom:1rem;animation:fl 4s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,9vw,6.2rem);font-weight:300;color:#fff;letter-spacing:.03em;line-height:1.05;text-shadow:0 0 80px rgba(171,114,251,.4)}
+.hero-title em{color:var(--pl);font-style:italic;font-weight:400}
+.hero-sub{font-size:.9rem;color:rgba(255,255,255,.55);margin-top:1rem;letter-spacing:.18em;text-transform:uppercase}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center;margin-top:1.6rem}
+.hc{background:rgba(255,255,255,.07);backdrop-filter:blur(12px);border:1px solid rgba(171,114,251,.3);color:rgba(255,255,255,.85);padding:.3rem .9rem;border-radius:100px;font-size:.8rem;font-weight:500;letter-spacing:.04em;transition:all .2s}
+.hc:hover{background:rgba(171,114,251,.2);border-color:var(--pl)}
+.scroll-cue{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(255,255,255,.3);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;animation:bob 2.5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+.scroll-cue::after{content:'';width:1px;height:34px;background:linear-gradient(to bottom,rgba(171,114,251,.5),transparent)}
+.nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr);box-shadow:0 2px 24px rgba(77,29,145,.06)}
+.nav-tabs{display:flex;padding:0 1.2rem;overflow-x:auto;scrollbar-width:none}
+.nav-tabs::-webkit-scrollbar{display:none}
+.nav-tab{padding:.95rem 1.2rem;font-size:.86rem;font-weight:500;color:var(--tm);cursor:pointer;border:none;background:none;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap;font-family:'DM Sans',sans-serif}
+.nav-tab:hover{color:var(--pm)}
+.nav-tab.active{color:var(--pm);border-bottom-color:var(--pm);font-weight:600}
+.city-bar{display:flex;gap:.4rem;padding:.6rem 1.2rem;overflow-x:auto;scrollbar-width:none;background:rgba(240,234,255,.5);border-top:1px solid var(--bdr)}
+.city-bar::-webkit-scrollbar{display:none}
+.city-btn{padding:.28rem .85rem;border-radius:100px;border:1.5px solid var(--bdr);background:white;color:var(--tm);font-size:.79rem;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap;font-family:'DM Sans',sans-serif}
+.city-btn:hover{border-color:var(--pm);color:var(--pm)}
+.city-btn.active{background:var(--pm);border-color:var(--pm);color:white;box-shadow:0 4px 14px rgba(112,17,246,.28)}
+.panel{display:none;padding:1.6rem 1.2rem;max-width:920px;margin:0 auto}
+.panel.active{display:block}
+/* Scenario toggle for Day 1 */
+.sc-wrap{margin-bottom:1rem}
+.sc-toggle{display:flex;gap:.5rem;background:white;border-radius:14px;padding:.45rem;box-shadow:0 2px 16px rgba(77,29,145,.08);border:1px solid var(--bdr);margin-bottom:1rem}
+.sc-btn{flex:1;padding:.55rem 1rem;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .25s;color:var(--tm);background:transparent}
+.sc-btn.active{background:linear-gradient(135deg,var(--dp),var(--pm));color:white;box-shadow:0 4px 16px rgba(112,17,246,.3)}
+.sc-btn:hover:not(.active){background:var(--pa);color:var(--pm)}
+.sc-panel{display:none}
+.sc-panel.active{display:block}
+/* Day card */
+.day-card{background:white;border-radius:20px;margin-bottom:1rem;overflow:hidden;box-shadow:0 2px 16px rgba(77,29,145,.06);border:1px solid rgba(112,17,246,.07);transition:box-shadow .3s}
+.day-card.hidden{display:none}
+.day-card:hover{box-shadow:0 6px 32px rgba(112,17,246,.11)}
+.day-hd{background:linear-gradient(135deg,var(--dp) 0%,var(--pm) 100%);padding:1.2rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;position:relative;overflow:hidden;transition:filter .2s}
+.day-hd:hover{filter:brightness(1.07)}
+.day-hd::after{content:'';position:absolute;top:-60%;right:-5%;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.07) 0,transparent 70%);border-radius:50%;pointer-events:none}
+.hd-l{position:relative;z-index:1}
+.day-num{font-size:.7rem;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.16em;text-transform:uppercase;margin-bottom:.12rem}
+.day-title{font-family:'Cormorant Garamond',serif;font-size:1.38rem;font-weight:600;color:white;line-height:1.2}
+.day-sub{font-size:.76rem;color:rgba(255,255,255,.6);margin-top:.12rem}
+.hd-r{display:flex;align-items:center;gap:.7rem;position:relative;z-index:1;flex-shrink:0}
+.city-pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);color:white;padding:.22rem .65rem;border-radius:100px;font-size:.71rem;font-weight:600;letter-spacing:.04em;white-space:nowrap}
+.chev{color:rgba(255,255,255,.6);font-size:1.1rem;transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.day-card.open .chev{transform:rotate(180deg)}
+.day-body{max-height:0;overflow:hidden;transition:max-height .6s cubic-bezier(.4,0,.2,1)}
+.day-card.open .day-body{max-height:9999px}
+/* Route map */
+.route-map{background:linear-gradient(135deg,#0e0428 0%,#1e0850 100%);padding:1.2rem 1.5rem;overflow-x:auto;scrollbar-width:thin;scrollbar-color:rgba(171,114,251,.3) transparent}
+.route-map::-webkit-scrollbar{height:4px}
+.route-map::-webkit-scrollbar-thumb{background:rgba(171,114,251,.3);border-radius:2px}
+.route-title{font-size:.67rem;font-weight:600;color:rgba(255,255,255,.4);letter-spacing:.16em;text-transform:uppercase;margin-bottom:1rem}
+.route-row{display:flex;align-items:center;gap:0;min-width:max-content}
+.rnode{display:flex;flex-direction:column;align-items:center;gap:.3rem;flex-shrink:0}
+.rnode-circle{width:44px;height:44px;border-radius:50%;background:rgba(171,114,251,.18);border:2px solid rgba(171,114,251,.45);display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+.rnode-circle:hover{background:rgba(171,114,251,.32)}
+.rnode-time{font-size:.7rem;font-weight:700;color:var(--pl);letter-spacing:.04em;white-space:nowrap}
+.rnode-name{font-size:.68rem;color:rgba(255,255,255,.7);white-space:nowrap;max-width:72px;text-align:center;line-height:1.2}
+.rconn{display:flex;flex-direction:column;align-items:center;gap:.25rem;padding:0 .5rem;flex-shrink:0;margin-top:-14px}
+.rconn-line{display:flex;align-items:center;gap:3px}
+.rconn-dash{width:18px;height:1.5px;background:rgba(171,114,251,.3);border-radius:1px}
+.rconn-icon{font-size:.8rem;line-height:1}
+.rconn-label{font-size:.6rem;color:rgba(255,255,255,.35);white-space:nowrap}
+/* Timeline */
+.day-inner{padding:1.2rem 1.5rem;display:flex;flex-direction:column;gap:0}
+.tl-item{display:flex;gap:1rem;position:relative;padding-bottom:1rem}
+.tl-item:last-child{padding-bottom:0}
+.tl-item:last-child .tl-line{display:none}
+.tl-left{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:64px}
+.tl-time{font-size:.72rem;font-weight:700;color:var(--pm);letter-spacing:.03em;text-align:center;line-height:1.2;white-space:nowrap}
+.tl-dot{width:10px;height:10px;border-radius:50%;margin:5px 0;flex-shrink:0;border:2px solid var(--pm);background:white}
+.tl-dot.flight{background:var(--bl);border-color:var(--bl)}
+.tl-dot.transport{background:var(--gn);border-color:var(--gn)}
+.tl-dot.hotel{background:var(--dp);border-color:var(--dp)}
+.tl-dot.booking{background:var(--am);border-color:var(--am)}
+.tl-dot.warning{background:var(--rd);border-color:var(--rd)}
+.tl-dot.food{background:var(--pk);border-color:var(--pk)}
+.tl-dot.note{background:var(--bl);border-color:var(--bl)}
+.tl-line{width:1.5px;flex:1;background:linear-gradient(to bottom,rgba(112,17,246,.15),rgba(112,17,246,.05));min-height:16px}
+.tl-right{flex:1;min-width:0;padding-top:.05rem}
+.tl-sec{padding:.75rem .9rem;border-radius:12px;border-left:3px solid var(--pl);background:var(--pa);margin-bottom:.15rem}
+.tl-sec.transport{background:var(--gnbg);border-left-color:var(--gn)}
+.tl-sec.flight{background:#f0f7ff;border-left-color:var(--bl)}
+.tl-sec.hotel{background:var(--pa);border-left-color:var(--dp)}
+.tl-sec.booking{background:var(--ambg);border-left-color:var(--am)}
+.tl-sec.warning{background:var(--rdbg);border-left-color:var(--rd)}
+.tl-sec.food{background:var(--pkbg);border-left-color:var(--pk)}
+.tl-sec.note{background:var(--blbg);border-left-color:var(--bl)}
+.tl-h{font-weight:600;font-size:.87rem;color:var(--tx);margin-bottom:.3rem;display:flex;align-items:center;gap:.35rem;flex-wrap:wrap;line-height:1.3}
+.tl-sec.transport .tl-h{color:#14532d}
+.tl-sec.flight .tl-h{color:#1e3a8a}
+.tl-sec.hotel .tl-h{color:var(--dp)}
+.tl-sec.booking .tl-h{color:#78350f}
+.tl-sec.warning .tl-h{color:#7f1d1d}
+.tl-sec.food .tl-h{color:#831843}
+.tl-sec.note .tl-h{color:#1e3a8a}
+.tl-sec p,.tl-sec li{font-size:.82rem;color:var(--tm);line-height:1.55}
+.tl-sec ul{list-style:none;display:flex;flex-direction:column;gap:.12rem}
+.tl-sec ul li::before{content:'›';margin-right:.4rem;color:var(--pl);font-weight:700}
+.tl-sec.transport ul li::before{color:var(--gn)}
+.tl-sec.food ul li::before{color:var(--pk)}
+.tl-sec.note ul li::before{color:var(--bl)}
+.tl-sec.booking ul li::before{color:var(--am)}
+.tl-sec.warning ul li::before{color:var(--rd)}
+.tl-link{display:inline-flex;align-items:center;gap:.25rem;font-size:.78rem;color:var(--pm);font-weight:500;text-decoration:none;background:rgba(112,17,246,.08);padding:.15rem .5rem;border-radius:6px;margin:.06rem .04rem 0 0;transition:background .2s}
+.tl-link:hover{background:rgba(112,17,246,.15)}
+.tl-tip{margin-top:.5rem;padding:.38rem .6rem;background:rgba(255,255,255,.7);border-radius:7px;font-size:.78rem;color:var(--dp);border:1px dashed rgba(112,17,246,.15)}
+/* Bookings */
+.bk-header{text-align:center;padding:1.4rem 0 .8rem}
+.bk-header h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--dp);font-weight:600}
+.bk-header p{color:var(--tl);font-size:.86rem;margin-top:.3rem}
+.bk-list{display:flex;flex-direction:column;gap:.65rem}
+.bk-item{background:white;border-radius:14px;padding:1rem 1.2rem;display:flex;align-items:center;gap:.9rem;box-shadow:0 2px 12px rgba(77,29,145,.05);border:1px solid var(--bdr);transition:transform .2s,box-shadow .2s}
+.bk-item:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(112,17,246,.1)}
+.bk-icon{width:40px;height:40px;border-radius:11px;background:var(--pa);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.bk-info{flex:1;min-width:0}
+.bk-name{font-weight:600;font-size:.88rem;color:var(--tx);margin-bottom:.18rem}
+.bk-meta{font-size:.76rem;color:var(--tl);display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.plat-tag{background:rgba(0,0,0,.06);color:var(--tm);padding:.16rem .48rem;border-radius:5px;font-size:.72rem;font-weight:500}
+.booked-tag{background:#dcfce7;color:#166534;padding:.16rem .5rem;border-radius:5px;font-size:.74rem;font-weight:600}
+.bk-link{font-size:.79rem;color:var(--pm);font-weight:600;text-decoration:none;background:var(--pa);padding:.22rem .65rem;border-radius:8px;transition:background .2s;white-space:nowrap;flex-shrink:0}
+.bk-link:hover{background:rgba(112,17,246,.15)}
+/* Tips */
+.panel-heading{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--dp);font-weight:600;text-align:center;padding:1.4rem 0 .3rem}
+.panel-sub{text-align:center;color:var(--tl);font-size:.86rem;margin-bottom:1.4rem}
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:.85rem}
+.tip-card{background:white;border-radius:14px;padding:1rem 1.1rem;display:flex;gap:.85rem;align-items:flex-start;box-shadow:0 2px 12px rgba(77,29,145,.05);border:1px solid var(--bdr)}
+.tip-icon{font-size:1.4rem;flex-shrink:0;margin-top:.04rem}
+.tip-card h4{font-size:.86rem;font-weight:600;color:var(--tx);margin-bottom:.22rem}
+.tip-card p{font-size:.8rem;color:var(--tm);line-height:1.55}
+/* Footer */
+.footer{background:linear-gradient(135deg,var(--dp),var(--pm));color:white;text-align:center;padding:3rem 2rem}
+.footer h3{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:400;margin-bottom:.5rem}
+.footer p{opacity:.7;font-size:.86rem;line-height:1.8}
+.route-strip-f{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.4rem;margin-top:1.4rem;font-size:.8rem;opacity:.6}
+.ra{opacity:.35}
+@media(max-width:640px){.panel{padding:1rem .9rem}.day-inner{padding:1rem}.day-hd{padding:1rem 1.1rem}.day-title{font-size:1.15rem}.city-pill{display:none}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="stars"></div>
+  <svg class="torii-svg" viewBox="0 0 700 420" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <rect x="62" y="98" width="34" height="322" rx="3"/><rect x="604" y="98" width="34" height="322" rx="3"/>
+    <rect x="22" y="98" width="656" height="46" rx="5"/><rect x="32" y="86" width="34" height="26" rx="4"/><rect x="634" y="86" width="34" height="26" rx="4"/>
+    <rect x="32" y="174" width="636" height="32" rx="4"/>
+    <rect x="46" y="58" width="18" height="54" rx="3"/><rect x="636" y="58" width="18" height="54" rx="3"/>
+  </svg>
+  <div class="hi">
+    <span class="hero-flag">🇯🇵</span>
+    <h1 class="hero-title">Japan<br><em>Awaits, Monal</em></h1>
+    <p class="hero-sub">April 20 — May 1, 2025 &nbsp;·&nbsp; 12 Days &nbsp;·&nbsp; 7 Cities</p>
+    <div class="hero-chips">
+      <span class="hc">🗼 Tokyo · Days 1–2, 10–12</span>
+      <span class="hc">🏯 Osaka · Days 2–4</span>
+      <span class="hc">🎋 Kyoto · Days 5–6</span>
+      <span class="hc">🌄 Nagoya · Day 7</span>
+      <span class="hc">♨️ Hakone · Day 8</span>
+      <span class="hc">🗻 Kawaguchiko · Day 9</span>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll to explore</div>
+</div>
+
+<div class="nav">
+  <div class="nav-tabs">
+    <button class="nav-tab active" data-tab="itinerary">📅 Itinerary</button>
+    <button class="nav-tab" data-tab="bookings">🎟️ Bookings</button>
+    <button class="nav-tab" data-tab="tips">💡 Travel Tips</button>
+  </div>
+  <div class="city-bar" id="cityBar">
+    <button class="city-btn active" data-city="all">🗾 All Days</button>
+    <button class="city-btn" data-city="tokyo">🗼 Tokyo</button>
+    <button class="city-btn" data-city="osaka">🏯 Osaka</button>
+    <button class="city-btn" data-city="kyoto">🎋 Kyoto</button>
+    <button class="city-btn" data-city="nagoya">🌄 Nagoya</button>
+    <button class="city-btn" data-city="hakone">♨️ Hakone</button>
+    <button class="city-btn" data-city="kawaguchiko">🗻 Kawaguchiko</button>
+  </div>
+</div>
+
+<div class="panel active" id="panel-itinerary">
+  <!-- DAY 1 special: two scenarios -->
+  <div class="sc-wrap day-card-wrap" data-city="tokyo" id="wrap-1">
+    <div class="day-card open" id="dc-1h">
+      <div class="day-hd" onclick="toggle('1h')">
+        <div class="hd-l">
+          <div class="day-num">Day 1 &nbsp;·&nbsp; April 20</div>
+          <div class="day-title">Arrival · Meiji Shrine · Harajuku · Shibuya 🌆</div>
+          <div class="day-sub">2 plans below based on your landing time — tap to switch</div>
+        </div>
+        <div class="hd-r"><span class="city-pill">🗼 Tokyo</span><span class="chev">⌄</span></div>
+      </div>
+      <div class="day-body">
+        <div style="padding:.85rem 1.5rem .4rem;background:white;border-bottom:1px solid var(--bdr)">
+          <div class="sc-toggle">
+            <button class="sc-btn active" onclick="switchSc('pm',event)">✈️ Land at 12:00 PM</button>
+            <button class="sc-btn" onclick="switchSc('am',event)">🌅 Land at 7:00 AM</button>
+          </div>
+        </div>
+
+        <!-- 12 PM Scenario -->
+        <div class="sc-panel active" id="sc-pm">
+          <div class="route-map">
+            <div class="route-title">📍 Route Map — 12 PM Landing</div>
+            <div class="route-row">
+              <div class="rnode"><div class="rnode-time">12:00</div><div class="rnode-circle">✈️</div><div class="rnode-name">Airport</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚂</div><div class="rconn-dash"></div></div><div class="rconn-label">~1 hr</div></div>
+              <div class="rnode"><div class="rnode-time">13:30</div><div class="rnode-circle">🏨</div><div class="rnode-name">MYSTAYS Hotel</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚇</div><div class="rconn-dash"></div></div><div class="rconn-label">~20 min</div></div>
+              <div class="rnode"><div class="rnode-time">14:30</div><div class="rnode-circle">⛩️</div><div class="rnode-name">Meiji Shrine</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚶</div><div class="rconn-dash"></div></div><div class="rconn-label">~5 min</div></div>
+              <div class="rnode"><div class="rnode-time">16:30</div><div class="rnode-circle">🛍️</div><div class="rnode-name">Harajuku</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚶</div><div class="rconn-dash"></div></div><div class="rconn-label">~10 min</div></div>
+              <div class="rnode"><div class="rnode-time">18:00</div><div class="rnode-circle">🌆</div><div class="rnode-name">Shibuya Sky</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚶</div><div class="rconn-dash"></div></div><div class="rconn-label">~5 min</div></div>
+              <div class="rnode"><div class="rnode-time">20:30</div><div class="rnode-circle">🍽️</div><div class="rnode-name">Dinner</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚶</div><div class="rconn-dash"></div></div><div class="rconn-label">~10 min</div></div>
+              <div class="rnode"><div class="rnode-time">22:00</div><div class="rnode-circle">🏮</div><div class="rnode-name">Night Walk</div></div>
+            </div>
+          </div>
+          <div class="day-inner">
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">12:00 PM</div><div class="tl-dot flight"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec flight"><div class="tl-h">✈️ Land · Clear Immigration</div><ul><li>Get Suica/Pasmo IC card at airport — used for all trains & convenience stores</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~1:30 PM</div><div class="tl-dot hotel"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec hotel"><div class="tl-h">🏨 Hotel MYSTAYS Iidabashi — Check In</div><ul><li>Drop bags, freshen up. Early check-in subject to availability</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~2:30 PM</div><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec"><div class="tl-h">⛩️ Meiji Shrine — Visit First (Beat the Crowd!)</div><ul><li><strong>Inner Garden</strong> — Kiyomasa's Well (spiritual power spot 🌿)</li><li><strong>Treasure House</strong> — Imperial artifacts of the Emperor & Empress</li><li>🧧 Buy the <strong>Red Omamori</strong> charm (luck & protection) + write wishes on wooden Ema plaques</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~4:30 PM</div><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec"><div class="tl-h">🛍️ Harajuku — Takeshita Street</div><ul><li>📱 <strong>Cas Pace</strong> — Cool phone covers &nbsp;<a class="tl-link" href="https://share.google/v1AMrIU8hyEi85zsm" target="_blank">📍</a></li><li>🏠 <strong>Dear You Homewares</strong> &nbsp;<a class="tl-link" href="https://share.google/fLzu04W3qtJm5Wsjf" target="_blank">📍</a> &nbsp;🧸 <strong>Kiddy Land</strong> &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/z12YM3idsa2Wvv8g6" target="_blank">📍</a></li><li>⚡ <strong>Harry Potter Shop</strong> &nbsp;<a class="tl-link" href="https://share.google/mJHHFqCdRvvFskM6X" target="_blank">📍</a></li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~6:00 PM</div><div class="tl-dot booking"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec booking"><div class="tl-h">🌆 Shibuya Sky — Sunset Views (4–6 PM slot ideal)</div><ul><li>Pre-book tickets: &nbsp;<a class="tl-link" href="https://www.shibuya-scramble-square.com/sky/ticket/" target="_blank">🎫 Book Here</a></li><li>📸 Tip: Starbucks bay windows on Shibuya crossing = best street-level photo!</li><li>Free alt: <strong>Tokyo Gov. Building</strong> (free entry + night light show)</li><li>Cheaper alt: <strong>Shibuya Magnet Rooftop Bar</strong> — just buy a drink &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/Ye4G8cqZAe23TTg8A" target="_blank">📍</a></li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~8:00 PM</div><div class="tl-dot food"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec food"><div class="tl-h">🍽️ Dinner in Shibuya — Pick One</div><ul><li>🇮🇳 <strong>Nataraj Harajuku</strong> (Indian) &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/1aFXUKVxyPiuTZej6" target="_blank">📍</a></li><li>🍜 <strong>Oreryu Shio-ramen</strong> (Tokyo's #1 Ramen) &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/frvBZ1zw29ySVvzt5" target="_blank">📍</a></li><li>🍣 <strong>Uobei Sushi ⭐</strong> (Conveyor belt — highly recommended!) &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/mR86manfBLgtbuUY9" target="_blank">📍</a></li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~10:00 PM</div><div class="tl-dot note"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec note"><div class="tl-h">🌃 Night Walk Options</div><ul><li>🏮 <strong>Omoide Yokocho</strong> (Memory Lane) &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/YfTiRbGKKuC36RbR9h" target="_blank">📍</a> &nbsp;<a class="tl-link" href="https://www.youtube.com/shorts/mLqXovRbwY8" target="_blank">▶ Watch</a></li><li>🌟 <strong>Shibuya Center-gai</strong> (Bustling nightlife) &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/5cv5GCWyrd1HVevw9" target="_blank">📍</a></li></ul></div></div></div>
+          </div>
+        </div>
+
+        <!-- 7 AM Scenario -->
+        <div class="sc-panel" id="sc-am">
+          <div class="route-map">
+            <div class="route-title">📍 Route Map — 7 AM Landing</div>
+            <div class="route-row">
+              <div class="rnode"><div class="rnode-time">07:00</div><div class="rnode-circle">✈️</div><div class="rnode-name">Airport</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚂</div><div class="rconn-dash"></div></div><div class="rconn-label">~2 hrs</div></div>
+              <div class="rnode"><div class="rnode-time">09:00</div><div class="rnode-circle">🏨</div><div class="rnode-name">Hotel (Lockers)</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚇</div><div class="rconn-dash"></div></div><div class="rconn-label">~30 min</div></div>
+              <div class="rnode"><div class="rnode-time">09:30</div><div class="rnode-circle">⛩️</div><div class="rnode-name">Meiji Shrine</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🛍️</div><div class="rconn-dash"></div></div><div class="rconn-label">~5 min</div></div>
+              <div class="rnode"><div class="rnode-time">13:00</div><div class="rnode-circle">🛍️</div><div class="rnode-name">Harajuku</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚇</div><div class="rconn-dash"></div></div><div class="rconn-label">~10 min</div></div>
+              <div class="rnode"><div class="rnode-time">15:30</div><div class="rnode-circle">🌆</div><div class="rnode-name">Shibuya</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚶</div><div class="rconn-dash"></div></div><div class="rconn-label">~5 min</div></div>
+              <div class="rnode"><div class="rnode-time">19:00</div><div class="rnode-circle">🍽️</div><div class="rnode-name">Dinner</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚶</div><div class="rconn-dash"></div></div><div class="rconn-label">~5 min</div></div>
+              <div class="rnode"><div class="rnode-time">20:30</div><div class="rnode-circle">🛍️</div><div class="rnode-name">Harajuku</div></div>
+            </div>
+          </div>
+          <div class="day-inner">
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">7:00 AM</div><div class="tl-dot flight"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec flight"><div class="tl-h">✈️ Land · Clear Immigration</div><ul><li>Get Suica/Pasmo IC card at airport</li><li>Breakfast at 7-Eleven or Lawson near hotel</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">9:00–10:00</div><div class="tl-dot hotel"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec hotel"><div class="tl-h">🏨 Hotel MYSTAYS — Drop Luggage in Lockers</div><ul><li>Room won't be ready — leave bags & head out light</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~9:30 AM</div><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec"><div class="tl-h">⛩️ Meiji Shrine (30 min from Hotel)</div><ul><li>Route: &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/sJS2hu7Uox5b2NhMA" target="_blank">📍 Maps</a></li><li>Inner Garden · Kiyomasa's Well · Red Omamori charm · Ema plaques</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~12:00 PM</div><div class="tl-dot food"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec food"><div class="tl-h">🍱 Lunch near Harajuku</div><ul><li>🍜 Kyushu Jangara Ramen &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/RW7tdFPXSkHJ4DLW8" target="_blank">📍</a> &nbsp;·&nbsp; ☕ Café Mori no Terrace &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/QdB3yEF7yzSmXBpD9" target="_blank">📍</a></li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~1:00 PM</div><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec"><div class="tl-h">🛍️ Harajuku — Takeshita Street</div><ul><li>📱 <strong>Cas Pace</strong> · 🏠 <strong>Dear You Homewares</strong> · 🧸 <strong>Kiddy Land</strong> · ⚡ <strong>Harry Potter Shop</strong></li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~3:30 PM</div><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec"><div class="tl-h">🌆 Shibuya Crossing + Evening</div><ul><li>Shibuya Sky or <strong>Shibuya Magnet Rooftop</strong> (buy a drink, get the view) &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/Ye4G8cqZAe23TTg8A" target="_blank">📍</a></li><li>📸 Starbucks bay windows = best Shibuya crossing photo spot!</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~6:00 PM</div><div class="tl-dot food"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec food"><div class="tl-h">🍽️ Dinner in Shibuya</div><ul><li>🍜 Oreryu Shio-ramen &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/frvBZ1zw29ySVvzt5" target="_blank">📍</a> &nbsp;·&nbsp; 🍣 Uobei Sushi &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/mR86manfBLgtbuUY9" target="_blank">📍</a></li><li>🏮 Omoide Yokocho on the way back if energy allows &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/YfTiRbGKKuC36RbR9h" target="_blank">📍</a></li></ul></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end day 1 -->
+
+  <div id="days-wrap"></div>
+</div>
+
+<div class="panel" id="panel-bookings">
+  <div class="bk-header"><h2>Pre-Bookings 🎟️</h2><p>All confirmed & recommended bookings for the trip</p></div>
+  <div class="bk-list" id="bk-wrap"></div>
+</div>
+
+<div class="panel" id="panel-tips">
+  <h2 class="panel-heading">Essential Travel Tips 💡</h2>
+  <p class="panel-sub">Everything you need for a smooth 12-day Japan adventure</p>
+  <div class="tips-grid" id="tips-wrap"></div>
+</div>
+
+<div class="footer">
+  <h3>Have a magical trip, Monal! 🌸</h3>
+  <p>Torii gates at sunrise · Shibuya at dusk · Mt. Fuji views · Onsen under the stars</p>
+  <div class="route-strip-f">
+    <span>🗼 Tokyo</span><span class="ra">→</span><span>🏯 Osaka</span><span class="ra">→</span>
+    <span>🎋 Kyoto</span><span class="ra">→</span><span>🌄 Nagoya</span><span class="ra">→</span>
+    <span>♨️ Hakone</span><span class="ra">→</span><span>🗻 Kawaguchiko</span><span class="ra">→</span>
+    <span>🗼 Tokyo</span><span class="ra">→</span><span>🏠 Home</span>
+  </div>
+  <p style="margin-top:1.4rem;font-size:.76rem;opacity:.45">いってらっしゃい — Bon Voyage! &nbsp;·&nbsp; April 20 – May 1, 2025</p>
+</div>
+
+<script>
+const T={walk:'🚶',metro:'🚇',train:'🚂',shink:'🚄',bus:'🚌',taxi:'🚕',flight:'✈️',boat:'⛵',free:'—',cable:'🚠',ferry:'🛳️'};
+
+const days=[
+{day:2,date:'April 21',city:'osaka',cityLabel:'Tokyo → Osaka',
+ title:'Asakusa + Teamlab Borderless → Osaka Arrival 🎨',
+ sub:'Early Asakusa · Teamlab 8:30 AM · Shinkansen · Hozenji · Osaka Castle · Dotonbori',
+ route:[
+  {time:'06:30',emoji:'🏯',name:'Asakusa'},
+  {conn:{icon:T.walk,label:'~5 min'}},
+  {time:'06:35',emoji:'⛩️',name:'Senso-ji'},
+  {conn:{icon:T.metro,label:'25 min'}},
+  {time:'08:30',emoji:'🎨',name:'Teamlab'},
+  {conn:{icon:T.metro,label:'20 min'}},
+  {time:'12:00',emoji:'🚄',name:'Tokyo Stn'},
+  {conn:{icon:T.shink,label:'2.5 hrs'}},
+  {time:'15:30',emoji:'🚉',name:'Shin-Osaka'},
+  {conn:{icon:T.metro,label:'~20 min'}},
+  {time:'16:00',emoji:'🏨',name:'Hotel Keihan'},
+  {conn:{icon:T.metro,label:'8 min'}},
+  {time:'17:00',emoji:'⛩️',name:'Hozenji'},
+  {conn:{icon:T.metro,label:'10 min'}},
+  {time:'18:00',emoji:'🏯',name:'Osaka Castle'},
+  {conn:{icon:T.walk,label:'15 min'}},
+  {time:'19:00',emoji:'🛍️',name:'Shinsaibashi'},
+  {conn:{icon:T.walk,label:'8 min'}},
+  {time:'20:00',emoji:'🌆',name:'Amerikamura'},
+  {conn:{icon:T.walk,label:'5 min'}},
+  {time:'21:00',emoji:'🏮',name:'Dotonbori'}
+ ],
+ tl:[
+  {time:'06:30',type:'activity',h:'🏯 Asakusa — Senso-ji Temple & Nakamise Street',items:['Walk from Asakusa Station (~2 min) → Kaminarimon Gate → Senso-ji Temple grounds','Browse Nakamise-dori for snacks, souvenirs & traditional goods','Go early — magical with no crowds! Allow ~1.5 hrs here']},
+  {time:'08:30',type:'booking',h:'🎨 Teamlab Borderless — Azabudai Hills (8:30 AM)',items:['Asakusa Station → Ginza Line → Ueno → Hibiya Line → Kamiyacho (25 min) → 10 min walk','Immersive digital art world — plan ~2.5–3 hrs','<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F20707-teamlab-borderless-admission-ticket-tokyo%2F" target="_blank">🎫 Book via Klook</a>']},
+  {time:'12:00',type:'transport',h:'🚄 Shinkansen — Tokyo → Shin-Osaka (~2.5 hrs)',items:['Head to Tokyo Station from Teamlab (~20 min by metro)','Nozomi Shinkansen · Platform 20–23 · ~2.5 hour journey','Arrive Shin-Osaka ~2:30 PM → JR Loop → Chuo Subway → Yodoyabashi']},
+  {time:'16:00',type:'hotel',h:'🏨 Check-In — Hotel Keihan Yodoyabashi',items:['Drop bags, freshen up · Central Osaka location']},
+  {time:'17:00',type:'activity',h:'⛩️ Hozenji Yokocho — Moss-Covered Alley',items:['7 min walk from Namba station via Dotonbori','Ancient moss-covered Fudo Myoo statue — splash water on it for good luck!','Charming stone-paved lantern-lit alley — very atmospheric']},
+  {time:'18:00',type:'booking',h:'🏯 Osaka Castle + Hokoku Shrine',items:['Tanimachi 4-chome → 12 min walk to the castle','Iconic 5-storey castle with moat & beautiful grounds','<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F30110-osaka-castle-ticket%2F" target="_blank">🎫 Book via Klook</a>']},
+  {time:'19:00',type:'activity',h:'🛍️ Shinsaibashi-suji Shopping Arcade',items:['Walk downhill from Osaka Castle via Otemon Gate (~15 min)','Covered arcade — Japanese brands, cosmetics, fashion & food']},
+  {time:'20:00',type:'activity',h:'🌆 Amerikamura + Orange Street (Tachibana-dori)',items:['Walk south on Midosuji → Amerikamura (8 min from Shinsaibashi)','Osaka\'s "Little America" — vintage shops, streetwear, cafés','3 min west → Tachibana-dori (Orange Street) for indie boutiques']},
+  {time:'21:00',type:'food',h:'🏮 Dotonbori — Iconic Night Food Street',items:['5 min walk east from Amerikamura → Dotonbori Canal','Must-do: 📸 Glico Running Man sign · Ebisu Bridge night views','Try: Takoyaki · Okonomiyaki · Street skewers']}
+ ]
+},
+
+{day:3,date:'April 22',city:'osaka',cityLabel:'Osaka',
+ title:'Namba Yasaka → Nara Day Trip + Umeda Sky + Osaka Teamlab 🦌',
+ sub:'Namba Yasaka Morning · Nara Deer Park · Todai-ji · 5:30 PM Return · Evening Osaka',
+ route:[
+  {time:'07:30',emoji:'🦁',name:'Namba Yasaka'},
+  {conn:{icon:T.metro,label:'~45 min'}},
+  {time:'09:00',emoji:'🦌',name:'Nara Deer Park'},
+  {conn:{icon:T.walk,label:'~10 min'}},
+  {time:'10:00',emoji:'🛕',name:'Todai-ji'},
+  {conn:{icon:T.walk,label:'~15 min'}},
+  {time:'11:30',emoji:'🌿',name:'Mt Wakakusa'},
+  {conn:{icon:T.walk,label:'~5 min'}},
+  {time:'13:00',emoji:'🍡',name:'Nakatanidou'},
+  {conn:{icon:T.walk,label:'~10 min'}},
+  {time:'14:00',emoji:'⛩️',name:'Ukimido'},
+  {conn:{icon:T.train,label:'17:30 train'}},
+  {time:'18:15',emoji:'🏙️',name:'Back Osaka'},
+  {conn:{icon:T.metro,label:'~20 min'}},
+  {time:'19:00',emoji:'🌃',name:'Umeda Sky'},
+  {conn:{icon:T.metro,label:'~25 min'}},
+  {time:'21:00',emoji:'🌸',name:'Teamlab Botanical'}
+ ],
+ tl:[
+  {time:'07:30',type:'activity',h:'🦁 Namba Yasaka Shrine — First Stop!',items:['Start the day here BEFORE heading to Nara','Iconic giant lion-head stage structure — unmissable for photos 📸','One of Osaka\'s most unique & photogenic landmarks — very quick visit, ~20 mins']},
+  {time:'08:30',type:'transport',h:'🚂 Head to Nara from Namba (Self-Guided)',items:['Namba → Kintetsu Nara Line (~35–45 min) → Kintetsu-Nara Station','5 min walk to Nara Park from station']},
+  {time:'09:00',type:'activity',h:'🦌 Nara Deer Park — Free-Roaming Deer!',items:['Hundreds of friendly deer roam freely — they bow if you bow!','Buy shika-senbei (deer crackers) from vendors — ¥200']},
+  {time:'10:00',type:'activity',h:'🛕 Todai-ji Temple — Great Buddha',items:["Japan's largest bronze Buddha (15 m tall!) · Entry ¥1,000","Giant wooden Nandai-mon gate with guardian statues — awe-inspiring"]},
+  {time:'11:30',type:'activity',h:'🌿 Mt Wakakusa',items:['Gentle grassy hill — walk up for panoramic views over Nara','A lovely peaceful change of pace from the temple crowds']},
+  {time:'13:00',type:'food',h:'🍡 Lunch at Nakatanidou + Ukimido Pavilion',items:['Nakatanidou — famous mochi shop, watch them pound fresh yomogi mochi by hand!','Ukimido Pavilion (~2 PM) — beautiful floating pavilion on Sagiike Pond · Very photogenic']},
+  {time:'17:30',type:'transport',h:'🚂 5:30 PM Train — Nara → Osaka (Namba)',items:['Kintetsu-Nara → Namba (~40 min) · Arrive Osaka ~6:15 PM','Head to Umeda Sky from Namba (~20 min by metro)']},
+  {time:'19:00',type:'booking',h:'🌃 Umeda Sky Building — Floating Garden Observatory',items:['Spectacular floating rooftop observatory with 360° views','Best as the city lights up at night — stunning!','<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F35861-umeda-sky-building-kuchu-teien-observatory-ticket%2F" target="_blank">🎫 Book via Klook</a>']},
+  {time:'21:00',type:'booking',h:'🌸 teamLab Botanical Garden Osaka',items:['Illuminated night botanical garden — flowers & trees lit up with digital art','<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F73632-teamlab-botanical-garden-osaka%2F" target="_blank">🎫 Book via Klook</a>']}
+ ]
+},
+
+{day:4,date:'April 23',city:'osaka',cityLabel:'Osaka → Kyoto',
+ title:'Temple Crawl · Kuromon Market · Aquarium → Kyoto Night 🐠',
+ sub:'Early Temples · Market · Osaka Aquarium · Kyoto: Gion & Pontocho Evening',
+ route:[
+  {time:'06:00',emoji:'⛩️',name:'Katsuo-ji'},
+  {conn:{icon:T.bus,label:'~30 min'}},
+  {time:'08:00',emoji:'🛕',name:'Shitennoji'},
+  {conn:{icon:T.metro,label:'~20 min'}},
+  {time:'11:00',emoji:'⛩️',name:'Sumiyoshi Taisha'},
+  {conn:{icon:T.metro,label:'~20 min'}},
+  {time:'12:00',emoji:'🐟',name:'Kuromon Market'},
+  {conn:{icon:T.walk,label:'~5 min'}},
+  {time:'13:00',emoji:'🍳',name:'Doguyasuji'},
+  {conn:{icon:T.metro,label:'~15 min'}},
+  {time:'14:00',emoji:'🎨',name:'Nakazakicho'},
+  {conn:{icon:T.metro,label:'~20 min'}},
+  {time:'15:30',emoji:'🐠',name:'Aquarium'},
+  {conn:{icon:T.walk,label:'~5 min'}},
+  {time:'17:30',emoji:'🎡',name:'Ferris Wheel'},
+  {conn:{icon:T.train,label:'~20 min'}},
+  {time:'19:30',emoji:'🚄',name:'→ Kyoto'},
+  {conn:{icon:T.train,label:'~25 min'}},
+  {time:'20:30',emoji:'👘',name:'Gion District'},
+  {conn:{icon:T.walk,label:'~5 min'}},
+  {time:'21:30',emoji:'🏮',name:'Pontocho Alley'}
+ ],
+ tl:[
+  {time:'06:00',type:'activity',h:'⛩️ Katsuo-ji Temple — Daruma Doll Temple',items:['Serene mountain temple covered with hundreds of red daruma dolls','Peaceful early morning atmosphere — very unique sight in Japan']},
+  {time:'08:00',type:'activity',h:'🛕 Shitennoji — One of Japan\'s Oldest Temples',items:["Founded in 593 AD by Prince Shotoku — stunning pagoda and gardens"]},
+  {time:'11:00',type:'activity',h:'⛩️ Sumiyoshi Taisha Shrine',items:['One of Japan\'s oldest and most important Shinto shrines','Famous arched Taiko-bashi bridge · Unique architecture unlike most shrines']},
+  {time:'12:00',type:'food',h:"🐟 Kuromon Ichiba Market — Osaka's Kitchen",items:["170+ stalls, 580 m long — Osaka's famous food market","Try: Fresh sashimi, tamagoyaki, tofu stalls, street skewers","Sennichimae Doguyasuji next door — Japan's famous cooking tools street"]},
+  {time:'14:00',type:'activity',h:'🎨 Nakazakicho — Osaka\'s Artsy Neighbourhood',items:['Vintage cafés, indie boutiques, murals and bookshops']},
+  {time:'15:30',type:'booking',h:'🐠 Osaka Aquarium Kaiyukan ⭐ (Recommended!)',items:["One of the world's best aquariums — enormous whale shark tank!","Allow ~2 hrs · Located at Tempozan Harbour",'<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F598-osaka-aquarium-kaiyukan-japan%2F" target="_blank">🎫 Book via Klook</a>']},
+  {time:'17:30',type:'activity',h:'🎡 Tempozan Giant Ferris Wheel',items:['One of Japan\'s largest ferris wheels · Right next to the aquarium','Great views over Osaka Bay at dusk']},
+  {time:'19:00',type:'transport',h:'🚄 Transfer → Kyoto (~20–25 min)',items:['Head to Osaka/Shin-Osaka station for JR/Shinkansen to Kyoto','Check in at hotel · Drop bags · Head out for Kyoto evening!']},
+  {time:'20:30',type:'activity',h:'👘 Gion District — Kyoto\'s Geisha Quarter',items:['Hanamikoji Street — the most photogenic street in Japan','Traditional wooden machiya townhouses lit by paper lanterns at night','Walk slowly and keep an eye out for maiko (apprentice geisha) 🎎','Very atmospheric — feels like stepping back in feudal Japan']},
+  {time:'21:30',type:'food',h:'🏮 Pontocho Alley — Dinner',items:['Narrow lantern-lit alley running parallel to the Kamo River — incredible at night','Mix of traditional kaiseki, izakayas & bars','One of the most atmospheric dinner streets in all of Japan 🍶']}
+ ]
+},
+
+{day:5,date:'April 24',city:'kyoto',cityLabel:'Kyoto',
+ title:'Arashiyama · Bamboo Grove · Kimono & Tea Ceremony 🎋',
+ sub:'Early Bamboo Forest · Boat Ride · Kimono at Maikoya · Nishiki Market',
+ route:[
+  {time:'06:00',emoji:'🎋',name:'Bamboo Grove'},
+  {conn:{icon:T.walk,label:'~5 min'}},
+  {time:'07:00',emoji:'🛕',name:'Tenryu-ji'},
+  {conn:{icon:T.boat,label:'~2 hrs'}},
+  {time:'09:00',emoji:'⛵',name:'Hozugawa Boat'},
+  {conn:{icon:T.walk,label:'~5 min'}},
+  {time:'11:30',emoji:'🌉',name:'Togetsukyo'},
+  {conn:{icon:T.walk,label:'~15 min'}},
+  {time:'12:00',emoji:'🐒',name:'Otagi Nenbut.'},
+  {conn:{icon:T.metro,label:'~25 min'}},
+  {time:'14:00',emoji:'👘',name:'Maikoya'},
+  {conn:{icon:T.walk,label:'~10 min'}},
+  {time:'17:00',emoji:'⚔️',name:'Samurai Museum'},
+  {conn:{icon:T.walk,label:'~10 min'}},
+  {time:'19:00',emoji:'🐟',name:'Nishiki Market'}
+ ],
+ tl:[
+  {time:'06:00',type:'activity',h:'🎋 ⭐ Arashiyama Bamboo Grove — ARRIVE EARLY!',items:['Serene, misty and magical at dawn — crowds arrive after 9 AM','Narrow path flanked by towering green bamboo — breathtaking','Best light for photography: 6:00–7:30 AM']},
+  {time:'07:00',type:'booking',h:'🛕 Tenryu-ji Temple + Hozugawa River Boat Ride',items:['Tenryu-ji: UNESCO World Heritage Zen garden with stunning mountain backdrop','Hozugawa Boat Ride: ~2 hrs on the river through dramatic gorges & rapids','Sagano Scenic Train option (Torokko) for a different forested mountain view']},
+  {time:'11:30',type:'activity',h:'🌉 Togetsukyo Bridge + Otagi Nenbutsuji Temple',items:['"Moon Crossing Bridge" — classic Arashiyama photo spot over the Oi River','Otagi Nenbutsuji: 1,200 unique stone Buddha statues hidden in the forest — enchanting'],},
+  {time:'12:00',type:'activity',h:'🐒 Iwatayama Monkey Park (Optional)',items:['Hillside park with free-roaming Japanese macaques','Worth it for the panoramic views of Kyoto from the top!']},
+  {time:'14:00',type:'activity',h:'👘 Kimono + Tea Ceremony at Maikoya (Karasuma Shijo)',items:['Dress in a traditional kimono + participate in a Japanese tea ceremony','Highly recommended cultural experience in the heart of Kyoto']},
+  {time:'17:00',type:'activity',h:'⚔️ Samurai & Ninja Museum Kyoto',items:['Interactive museum — try on armour, learn about ninja & samurai culture','Fun & hands-on — great for photos!']},
+  {time:'19:00',type:'food',h:"🐟 Nishiki Market — Kyoto's Kitchen Street",items:["400-year-old covered market with 100+ food stalls","Try: Kyoto pickles (tsukemono), fresh tofu, matcha sweets, grilled skewers"]}
+ ]
+},
+
+{day:6,date:'April 25',city:'kyoto',cityLabel:'Kyoto → Nagoya',
+ title:'Fushimi Inari · Sake District → Nagoya Night Transfer ⛩️',
+ sub:'Thousand Torii Gates · Sake Museum · 9:30 PM Train to Nagoya',
+ route:[
+  {time:'06:00',emoji:'⛩️',name:'Fushimi Inari'},
+  {conn:{icon:T.walk,label:'~2 hrs'}},
+  {time:'08:30',emoji:'🍶',name:'Sake District'},
+  {conn:{icon:T.walk,label:'~5 min'}},
+  {time:'10:00',emoji:'🏛️',name:'Gekkeikan Museum'},
+  {conn:{icon:T.free,label:'Optional'}},
+  {time:'11:30',emoji:'⛵',name:'Canal Boat'},
+  {conn:{icon:T.train,label:'~20 min'}},
+  {time:'14:00',emoji:'🏨',name:'Hotel'},
+  {conn:{icon:T.free,label:'Rest & Pack'}},
+  {time:'21:30',emoji:'🚄',name:'→ Nagoya'}
+ ],
+ tl:[
+  {time:'06:00',type:'activity',h:'⛩️ ⭐ Fushimi Inari Taisha — Early Torii Walk',items:['Thousands of vibrant orange torii gates winding up the mountain','Go at 6 AM — mist in the gates is absolutely magical; crowded later','Walk as far up as you like — even 30 min up is stunning']},
+  {time:'08:30',type:'activity',h:'🍶 Fushimi Sake District Walk',items:["Fushimi is Kyoto's sake-producing area — beautiful canal streets","Old sake breweries, willow-lined canals, traditional merchant townhouses"]},
+  {time:'10:00',type:'activity',h:'🏛️ Gekkeikan Okura Sake Museum',items:['Museum inside a 350-year-old sake brewery','Learn sake production history + tasting session']},
+  {time:'11:30',type:'activity',h:'⛵ Fushimi Jikkokubune Canal Boat Ride (Optional)',items:['Flat-bottom wooden boat along the historic canal — very scenic','30 min ride · A relaxing way to end the Fushimi morning']},
+  {time:'14:00',type:'hotel',h:'🏨 Return to Hotel — Rest, Lunch & Pack',items:['Collect luggage · Last chance for any Kyoto shopping or food']},
+  {time:'21:30',type:'transport',h:'🚄 Night Transfer → Nagoya',items:['Shinkansen or limited express to Nagoya (~35 min by Shinkansen)','Hotel: KURETAKE INN NAGOYA HISAYAODORI — Check in & rest','Big day tomorrow — Takayama tour departs early!']},
+ ]
+},
+
+{day:7,date:'April 26',city:'nagoya',cityLabel:'Nagoya',
+ title:'Takayama & Shirakawa-go Day Tour 🏔️',
+ sub:'Guided Tour from Nagoya · Historic Villages · Mountain Scenery',
+ route:[
+  {time:'07:50',emoji:'🏨',name:'Hotel'},
+  {conn:{icon:T.walk,label:'~5 min'}},
+  {time:'08:00',emoji:'🚌',name:'Tour Departs'},
+  {conn:{icon:T.bus,label:'~2.5 hrs'}},
+  {time:'10:30',emoji:'🏘️',name:'Takayama'},
+  {conn:{icon:T.bus,label:'~45 min'}},
+  {time:'13:00',emoji:'🏠',name:'Shirakawa-go'},
+  {conn:{icon:T.bus,label:'~2.5 hrs'}},
+  {time:'19:30',emoji:'🚉',name:'Nagoya Stn'}
+ ],
+ tl:[
+  {time:'07:50',type:'warning',h:'⚠️ Important — Meeting Point Details',items:['📍 Gather in front of <strong>Nagoya Ekinishi Police Box</strong> (West Exit of Nagoya Station)','Your guide holds a <strong>Wonder Tour flag</strong> — no prior contact will be made','Arrive 10 minutes before departure · No refund for latecomers/no-shows']},
+  {time:'08:00',type:'booking',h:'🚌 Takayama & Shirakawa-go Day Tour — DEPARTS',items:['Full-day guided tour from Nagoya (English commentary)','<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1195415&k_site=https%3A%2F%2Fwww.klook.com%2Fen-IN%2Factivity%2F15800-takayama-shirakawa-go-day-trip-nagoya%2F" target="_blank">🎫 Book via Klook</a>']},
+  {time:'10:30',type:'activity',h:'🏘️ Takayama — Preserved Edo-Era Old Town',items:["Japan's best-preserved old merchant town — looks like feudal Japan","Sanmachi Suji historic district: sake breweries, craft shops & cafés","Try: Hida beef skewers · Mitarashi dango · Local sake tasting"]},
+  {time:'13:00',type:'activity',h:'🏠 Shirakawa-go — UNESCO Thatched Farmhouses',items:['Iconic gassho-zukuri (A-frame thatched roof) farmhouses in a mountain valley','UNESCO World Heritage Site — looks like something from a fairy tale','Observation deck gives a stunning panoramic view of the whole village']},
+  {time:'19:30',type:'transport',h:'🚉 Return to Nagoya Station',items:['Tour ends at Nagoya Station — make your own way back to hotel','Pack bags tonight — transferring to Hakone tomorrow!']}
+ ]
+},
+
+{day:8,date:'April 27',city:'hakone',cityLabel:'Nagoya → Hakone',
+ title:'Owakudani · Pirate Ship · Open Air Museum · Onsen ♨️',
+ sub:'Morning Transfer · Hakone Ropeway · Lake Ashi · Ryokan Onsen',
+ route:[
+  {time:'Morning',emoji:'🚄',name:'→ Hakone'},
+  {conn:{icon:T.shink,label:'Odawara'}},
+  {time:'10:00',emoji:'🚠',name:'Owakudani'},
+  {conn:{icon:T.cable,label:'~20 min'}},
+  {time:'11:30',emoji:'🛳️',name:'Pirate Ship'},
+  {conn:{icon:T.ferry,label:'~30 min'}},
+  {time:'13:00',emoji:'🍽️',name:'Lunch'},
+  {conn:{icon:T.bus,label:'~20 min'}},
+  {time:'14:30',emoji:'🎨',name:'Open Air Museum'},
+  {conn:{icon:T.bus,label:'~15 min'}},
+  {time:'16:30',emoji:'♨️',name:'Ryokan Onsen'},
+  {conn:{icon:T.train,label:'~20 min'}},
+  {time:'20:00',emoji:'🚂',name:'Tozan Railway'}
+ ],
+ tl:[
+  {time:'Morning',type:'transport',h:'🚄 Transfer to Hakone — Odawara Station',items:['Shinkansen from Nagoya → Odawara → Hakone-Yumoto (Hakone Tozan Line)','Highly recommended: pick up <strong>Hakone Freepass</strong> at Odawara for unlimited transport','<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1230992&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F821-hakone-transport-day-pass-tokyo%2F" target="_blank">🎫 Hakone Freepass — Klook</a>']},
+  {time:'10:00',type:'activity',h:'🚠 Owakudani Ropeway & Volcanic Valley',items:['Spectacular cable car ride over an active volcanic valley','Bubbling sulphur vents and steaming hot springs — dramatic landscape','Try the famous black eggs (kuro-tamago) boiled in volcanic springs!']},
+  {time:'11:30',type:'booking',h:'🛳️ Pirate Ship Cruise — Lake Ashi',items:['Ornate pirate-themed ferry across beautiful Lake Ashi','On a clear day: stunning view of snow-capped Mt. Fuji from the lake!','Covered by Hakone Freepass']},
+  {time:'13:00',type:'food',h:'🍽️ Lunch near Hakone-machi or Moto-Hakone',items:['Mountain town restaurants near the lake · Hakone soba is a local specialty']},
+  {time:'14:30',type:'activity',h:'🎨 Hakone Open Air Museum (1:30–4:30 PM)',items:['Incredible sculpture park with Picasso gallery, Rodin pieces & sweeping mountain views','One of the best open-air art museums in Japan · Allow 2–3 hrs']},
+  {time:'16:30',type:'hotel',h:'♨️ Onsen Ryokan — Check In',items:['Traditional Japanese inn experience — tatami rooms, yukata robes, kaiseki dinner','Enjoy the onsen (hot spring bath) — incredibly relaxing after a long day!']},
+  {time:'20:00',type:'activity',h:'🚂 Hakone Tozan Railway (Evening Ride)',items:['Japan\'s steepest mountain railway — a scenic evening experience','Switchback railway through the forested mountains — unique and beautiful']}
+ ]
+},
+
+{day:9,date:'April 28',city:'kawaguchiko',cityLabel:'Hakone → Kawaguchiko',
+ title:'Kawaguchiko · Chureita Pagoda · Lake Fuji Views 🗻',
+ sub:'Transfer · Iconic Pagoda · Lake Kawaguchi · Hotel Mifujein',
+ route:[
+  {time:'Morning',emoji:'🚌',name:'→ Kawaguchiko'},
+  {conn:{icon:T.bus,label:'~90 min'}},
+  {time:'10:00',emoji:'🏨',name:'Hotel Mifujein'},
+  {conn:{icon:T.bus,label:'~20 min'}},
+  {time:'11:00',emoji:'⛩️',name:'Chureita Pagoda'},
+  {conn:{icon:T.bus,label:'~15 min'}},
+  {time:'13:00',emoji:'🛍️',name:'Honcho Street'},
+  {conn:{icon:T.bus,label:'~10 min'}},
+  {time:'14:30',emoji:'🌸',name:'Oishi Park'},
+  {conn:{icon:T.walk,label:'~10 min'}},
+  {time:'16:00',emoji:'🗻',name:'Lake Kawaguchi'}
+ ],
+ tl:[
+  {time:'Morning',type:'transport',h:'🚌 Transfer: Hakone → Kawaguchiko',items:['Hakone-Yumoto → Gotemba → Kawaguchiko Station (bus/train ~90 min)','Hotel Mifujein — check in or leave bags · Lake Kawaguchi views']},
+  {time:'11:00',type:'activity',h:'⛩️ ⭐ Chureita Pagoda — Mt. Fuji Iconic Shot',items:["Japan's most iconic photo: five-storey pagoda with Mt. Fuji behind it",'398 stone steps up — worth every step! · Early or late afternoon = best light','Clear weather is key — check the forecast the night before']},
+  {time:'13:00',type:'food',h:'🛍️ Honcho Street — Local Lunch & Shops',items:['Main shopping street of Kawaguchiko — local cafés & Fuji souvenirs','Try: Lake fish dishes, Fuji-themed sweets, local crafts']},
+  {time:'14:30',type:'activity',h:'🌸 Oishi Park — Fuji Panorama',items:["Lakeside park with one of the best Mt. Fuji views — stunning on a clear day","Lavender and flowers in season · Very peaceful, easy walking"]},
+  {time:'16:00',type:'activity',h:'🗻 Lake Kawaguchiko — Sunset Stroll',items:["Relax by Japan's most famous lake with Fuji as the backdrop","Boat ride options available · Gorgeous reflections in the still water at dusk"]}
+ ]
+},
+
+{day:10,date:'April 29',city:'tokyo',cityLabel:'Kawaguchiko → Tokyo',
+ title:'Return to Tokyo · Asakusa · Akihabara · Ginza 🗼',
+ sub:'Morning Transfer · Sumo Show Option · Electric Town · Luxury Ginza',
+ route:[
+  {time:'Morning',emoji:'🚌',name:'→ Tokyo'},
+  {conn:{icon:T.bus,label:'~2 hrs'}},
+  {time:'11:00',emoji:'🏯',name:'Asakusa'},
+  {conn:{icon:T.metro,label:'~15 min'}},
+  {time:'13:00',emoji:'🎮',name:'Akihabara'},
+  {conn:{icon:T.metro,label:'~20 min'}},
+  {time:'16:00',emoji:'💎',name:'Ginza'},
+  {conn:{icon:T.metro,label:'~15 min'}},
+  {time:'19:30',emoji:'🍽️',name:'Dinner'},
+  {conn:{icon:T.walk,label:'~5 min'}},
+  {time:'20:30',emoji:'🥊',name:'Sumo Show'}
+ ],
+ tl:[
+  {time:'Morning',type:'transport',h:'🚌 Transfer: Kawaguchiko → Tokyo (~2 hrs bus)',items:['Kawaguchiko Station → Shinjuku Bus Terminal (~2 hrs, very scenic!)','Hotel: <strong>Other Space Asakusa</strong> — Check in & refresh']},
+  {time:'11:00',type:'activity',h:'🏯 Asakusa District — Explore',items:["Senso-ji Temple area · Nakamise-dori shopping street","Explore Asakusa backstreets · Hoppy Street for food & drinks nearby"]},
+  {time:'13:00',type:'activity',h:'🎮 Akihabara — Electric Town',items:["Tokyo's legendary electronics, anime, manga & gaming street","Multi-storey electronics stores · Retro game shops · Anime merchandise"]},
+  {time:'16:00',type:'activity',h:'💎 Ginza District — Elegant Evening',items:["Tokyo's most upscale neighbourhood — luxury boutiques, galleries, fine dining","Itoya (stationery store) · Ginza Six · Tsukiji Outer Market nearby for dinner"]},
+  {time:'19:30',type:'food',h:'🍽️ Early Dinner before Sumo',items:['Grab dinner in Asakusa or near the sumo venue before the show','Keep it light — chankonabe (sumo stew) is included at the show!']},
+  {time:'20:30',type:'booking',h:'🥊 Asakusa Sumo Club — Sumo Show (8:30 PM)',items:['Live sumo wrestling show + Chankonabe (sumo stew) meal','Unique, highly entertaining cultural experience!','<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1230992&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F109994-asakusa-sumo-club-sumo-show-admission-chankonabe-tokyo%2F" target="_blank">🎫 Book via Klook</a>']}
+ ]
+},
+
+{day:11,date:'April 30',city:'tokyo',cityLabel:'Tokyo',
+ title:'Kamakura Day Trip — Great Buddha & Bamboo Temple 🛕',
+ sub:'40 min from Tokyo · Giant Buddha · Bamboo Temple · Beach Walk',
+ route:[
+  {time:'08:30',emoji:'🚂',name:'Tokyo Stn'},
+  {conn:{icon:T.train,label:'~50 min'}},
+  {time:'09:30',emoji:'🛕',name:'Kamakura Stn'},
+  {conn:{icon:T.walk,label:'~5 min'}},
+  {time:'09:45',emoji:'🛍️',name:'Komachi-dori'},
+  {conn:{icon:T.walk,label:'~10 min'}},
+  {time:'10:30',emoji:'⛩️',name:'Tsurugaoka Shrine'},
+  {conn:{icon:T.bus,label:'~10 min'}},
+  {time:'12:00',emoji:'🗿',name:'Great Buddha'},
+  {conn:{icon:T.bus,label:'~15 min'}},
+  {time:'13:30',emoji:'🎋',name:'Hokokuji Temple'},
+  {conn:{icon:T.bus,label:'~10 min'}},
+  {time:'15:00',emoji:'⛩️',name:'Sasuke Inari'},
+  {conn:{icon:T.bus,label:'~10 min'}},
+  {time:'16:30',emoji:'🏖️',name:'Yuigahama Beach'}
+ ],
+ tl:[
+  {time:'08:30',type:'transport',h:'🚂 Direct Train Tokyo → Kamakura (~40–50 min)',items:['JR Yokosuka Line from Tokyo/Shinjuku to Kamakura Station','Suica/Pasmo works · Very easy direct journey']},
+  {time:'09:45',type:'activity',h:'🛍️ Komachi-dori Street — Charming Entry Lane',items:['Cute pedestrian street leading to the main shrine','Filled with local snacks, pottery, leather goods & Kamakura souvenirs']},
+  {time:'10:30',type:'activity',h:'⛩️ Tsurugaoka Hachimangu Shrine',items:["Kamakura's most important shrine — grand staircase, lotus ponds & beautiful grounds","Great for a peaceful morning stroll before the crowds build"]},
+  {time:'12:00',type:'activity',h:'🗿 Kotoku-in — Great Buddha of Kamakura ⭐',items:['Iconic 13-metre bronze Buddha — one of Japan\'s most famous landmarks','Serene and impressive up close — you can even go inside the statue!','Entry ¥300 · Easy 10 min bus from Kamakura Station']},
+  {time:'13:30',type:'activity',h:'🎋 Hokokuji Temple — The Bamboo Temple',items:['Stunning bamboo grove in a temple garden — peaceful and photogenic','Matcha tea served in the bamboo grove · Entry ¥500','Much less crowded than Arashiyama — a hidden gem!']},
+  {time:'15:00',type:'activity',h:'⛩️ Sasuke Inari Shrine',items:['Small mountain shrine with miniature torii gates and stone foxes','Hidden gem — few tourists, very atmospheric forest walk']},
+  {time:'16:30',type:'activity',h:'🏖️ Yuigahama Beach — Afternoon Wind-Down',items:['Relaxed beach with sea views — great way to end the Kamakura day','Watch the sunset over the Pacific · Beach cafés for a final drink']}
+ ]
+},
+
+{day:12,date:'May 1',city:'tokyo',cityLabel:'Tokyo',
+ title:'Departure Day — Fly Back to India 🛫',
+ sub:'Check Out · Head to Airport · Bon Voyage!',
+ route:[
+  {time:'Morning',emoji:'🏨',name:'Hotel Checkout'},
+  {conn:{icon:T.train,label:'~60 min'}},
+  {time:'Afternoon',emoji:'✈️',name:'Airport'},
+  {conn:{icon:T.flight,label:'Fly home'}},
+  {time:'Evening',emoji:'🏠',name:'India'}
+ ],
+ tl:[
+  {time:'Morning',type:'hotel',h:'🏨 Hotel Checkout — Other Space Asakusa',items:['Pack up & check out · Store bags at hotel if flight is late','Last chance for a conbini breakfast or Asakusa matcha!']},
+  {time:'~2 hrs before',type:'transport',h:'🚂 Head to Airport',items:['Narita: Narita Express from Tokyo Station (~60 min)','Haneda: Tokyo Monorail from Hamamatsucho (~30 min)','Arrive at least 2 hours before international departure']},
+  {time:'Departure',type:'flight',h:'✈️ Fly Home — Incredible Memories Made 🌸',items:['12 days · 7 cities · Countless unforgettable experiences','From Meiji Shrine to Mt. Fuji · Bamboo groves to bullet trains · Onsen to sushi']}
+ ]
+}
+];
+
+const bookings=[
+ {icon:'🌆',name:'Shibuya Sky Observatory',day:'Day 1 · Apr 20',city:'Tokyo',plat:'Direct',link:'https://www.shibuya-scramble-square.com/sky/ticket/'},
+ {icon:'🎨',name:'Teamlab Borderless Tokyo — Azabudai Hills',day:'Day 2 · Apr 21',city:'Tokyo',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F20707-teamlab-borderless-admission-ticket-tokyo%2F'},
+ {icon:'🏯',name:'Osaka Castle E-Ticket',day:'Day 2 · Apr 21',city:'Osaka',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F30110-osaka-castle-ticket%2F'},
+ {icon:'🌃',name:'Umeda Sky Building Observatory',day:'Day 3 · Apr 22',city:'Osaka',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F35861-umeda-sky-building-kuchu-teien-observatory-ticket%2F'},
+ {icon:'🌸',name:'teamLab Botanical Garden Osaka',day:'Day 3 · Apr 22',city:'Osaka',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F73632-teamlab-botanical-garden-osaka%2F'},
+ {icon:'🐠',name:'Osaka Aquarium Kaiyukan E-Ticket',day:'Day 4 · Apr 23',city:'Osaka',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F598-osaka-aquarium-kaiyukan-japan%2F'},
+ {icon:'🏔️',name:'Takayama & Shirakawa-go Day Tour',day:'Day 7 · Apr 26',city:'Nagoya',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1195415&k_site=https%3A%2F%2Fwww.klook.com%2Fen-IN%2Factivity%2F15800-takayama-shirakawa-go-day-trip-nagoya%2F'},
+ {icon:'🚠',name:'Hakone Freepass (2-Day Transport Pass)',day:'Day 8 · Apr 27',city:'Hakone',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1230992&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F821-hakone-transport-day-pass-tokyo%2F'},
+ {icon:'🥊',name:'Asakusa Sumo Show + Chankonabe',day:'Day 10 · Apr 29',city:'Tokyo',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1230992&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F109994-asakusa-sumo-club-sumo-show-admission-chankonabe-tokyo%2F'},
+];
+
+const tips=[
+ {icon:'💳',title:'Suica / Pasmo Card',text:'Get one at the airport as soon as you land. Load ¥5,000 to start. Works on ALL trains, metros, buses — and even convenience stores. Makes life so easy.'},
+ {icon:'🎟️',title:'Pre-Book Key Attractions',text:'Teamlab Borderless, Shibuya Sky, and the Takayama Tour especially sell out fast. Book these before you travel. Sumo Show (8:30 PM, Day 10) and Osaka Aquarium are also best pre-booked.'},
+ {icon:'🏪',title:'7-Eleven & Lawson Are Your Best Friends',text:'Japanese convenience stores are genuinely incredible — fresh onigiri, hot food, ATMs (that accept foreign cards!), and open 24/7. Never skip them.'},
+ {icon:'📸',title:'Morning Magic',text:'Arrive early at Arashiyama (6 AM!), Fushimi Inari (6 AM!), and Meiji Shrine to beat the crowds. Golden hour light + no tourists = magical photos.'},
+ {icon:'👘',title:'Kimono & Yukata',text:'Do the Kimono + Tea ceremony at Maikoya in Kyoto — it\'s a highlight. Also wear the yukata robe at your onsen ryokan in Hakone for the full experience!'},
+ {icon:'🗻',title:'Mt. Fuji Tip',text:'Chureita Pagoda (Day 9) and Lake Kawaguchiko give the best Mt. Fuji views. Check the weather forecast the night before — clear mornings are key!'},
+ {icon:'⚠️',title:'Takayama Tour — Don\'t Be Late!',text:'Meet at Nagoya Ekinishi Police Box (west exit) at 7:50 AM sharp. Guide holds a Wonder Tour flag. Latecomers are not eligible for a refund.'},
+ {icon:'♨️',title:'Onsen Etiquette',text:'Remove all clothing before entering the onsen — swimwear is not worn. Rinse thoroughly at the shower stations first. Tattoos may be restricted at some facilities.'},
+ {icon:'🍜',title:'Must-Try Foods',text:'Ramen in Tokyo · Takoyaki & Okonomiyaki in Osaka · Matcha everything in Kyoto · Hida beef in Takayama · Conveyor belt sushi everywhere!'},
+ {icon:'🚄',title:'Shinkansen Tips',text:'Book Shinkansen tickets in advance for key routes (Osaka → Kyoto → Nagoya → Hakone). Keep your ticket to exit barriers. Non-reserved is fine for most journeys.'},
+ {icon:'📱',title:'Useful Apps',text:'Google Maps (download offline maps!) · Google Translate (camera mode for menus!) · Hyperdia or Navitime for train routes · Klook for booking activities.'},
+ {icon:'🛍️',title:'Shopping Highlights',text:'Harajuku Takeshita St (quirky) · Shinsaibashi Osaka (fashion) · Akihabara (electronics & anime) · Nishiki Market Kyoto (food & crafts) · Ginza (luxury).'},
+];
+
+function buildRoute(route){
+  return `<div class="route-row">${route.map(item=>{
+    if(item.conn) return `<div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">${item.conn.icon}</div><div class="rconn-dash"></div></div><div class="rconn-label">${item.conn.label}</div></div>`;
+    return `<div class="rnode"><div class="rnode-time">${item.time}</div><div class="rnode-circle">${item.emoji}</div><div class="rnode-name">${item.name}</div></div>`;
+  }).join('')}</div>`;
+}
+
+function buildTL(tl){
+  return tl.map((item)=>{
+    const body=item.items?`<ul>${item.items.map(x=>`<li>${x}</li>`).join('')}</ul>`:'';
+    return `<div class="tl-item">
+      <div class="tl-left"><div class="tl-time">${item.time}</div><div class="tl-dot ${item.type||'activity'}"></div><div class="tl-line"></div></div>
+      <div class="tl-right"><div class="tl-sec ${item.type||'activity'}"><div class="tl-h">${item.h}</div>${body}</div></div>
+    </div>`;
+  }).join('');
+}
+
+function renderDays(){
+  document.getElementById('days-wrap').innerHTML=days.map(d=>`
+    <div class="day-card" data-city="${d.city}" id="dc-${d.day}">
+      <div class="day-hd" onclick="toggle(${d.day})">
+        <div class="hd-l">
+          <div class="day-num">Day ${d.day} &nbsp;·&nbsp; ${d.date}</div>
+          <div class="day-title">${d.title}</div>
+          <div class="day-sub">${d.sub}</div>
+        </div>
+        <div class="hd-r"><span class="city-pill">${d.cityLabel}</span><span class="chev">⌄</span></div>
+      </div>
+      <div class="day-body">
+        <div class="route-map"><div class="route-title">📍 Day ${d.day} Route</div>${buildRoute(d.route)}</div>
+        <div class="day-inner">${buildTL(d.tl)}</div>
+      </div>
+    </div>`).join('');
+}
+
+function renderBookings(){
+  document.getElementById('bk-wrap').innerHTML=bookings.map(b=>`
+    <div class="bk-item">
+      <div class="bk-icon">${b.icon}</div>
+      <div class="bk-info">
+        <div class="bk-name">${b.name}</div>
+        <div class="bk-meta"><span>📅 ${b.day}</span><span>📍 ${b.city}</span><span class="plat-tag">${b.plat}</span></div>
+      </div>
+      <a class="bk-link" href="${b.link}" target="_blank">🎫 Book</a>
+    </div>`).join('');
+}
+
+function renderTips(){
+  document.getElementById('tips-wrap').innerHTML=tips.map(t=>`
+    <div class="tip-card"><span class="tip-icon">${t.icon}</span><div><h4>${t.title}</h4><p>${t.text}</p></div></div>`).join('');
+}
+
+function toggle(n){
+  const el=document.getElementById(`dc-${n}`);
+  el.classList.toggle('open');
+}
+
+function switchSc(sc,e){
+  e.stopPropagation();
+  document.querySelectorAll('.sc-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.sc-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('sc-'+sc).classList.add('active');
+  e.currentTarget.classList.add('active');
+}
+
+document.querySelectorAll('.nav-tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-'+btn.dataset.tab).classList.add('active');
+    document.getElementById('cityBar').style.display=btn.dataset.tab==='itinerary'?'flex':'none';
+  });
+});
+
+document.querySelectorAll('.city-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.city-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const city=btn.dataset.city;
+    // handle Day 1 wrap
+    const w=document.getElementById('wrap-1');
+    if(w) w.style.display=(city==='all'||city==='tokyo')?'block':'none';
+    document.querySelectorAll('.day-card').forEach(card=>{
+      card.classList.toggle('hidden',city!=='all'&&card.dataset.city!==city);
+    });
+  });
+});
+
+(function(){
+  const hero=document.querySelector('.hero');
+  for(let i=0;i<24;i++){
+    const p=document.createElement('div');
+    p.className='petal';
+    const s=Math.random()*9+5;
+    p.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s}px;animation-duration:${Math.random()*8+4}s;animation-delay:${Math.random()*9}s;opacity:${Math.random()*.4+.1};background:hsla(${Math.random()*25+318},80%,78%,.6)`;
+    hero.appendChild(p);
+  }
+})();
+
+renderDays();renderBookings();renderTips();
+document.getElementById('dc-2').classList.add('open');
+</script>
+</body>
+</html>
