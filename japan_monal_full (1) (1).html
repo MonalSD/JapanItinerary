@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japan Trip — Monal · April–May 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dp:#4D1D91;--pm:#7011F6;--pl:#AB72FB;--pa:#F0EAFF;
+  --gn:#16a34a;--gnbg:#f0fdf4;--am:#d97706;--ambg:#fffbeb;
+  --bl:#2563eb;--blbg:#eff6ff;--rd:#dc2626;--rdbg:#fef2f2;
+  --pk:#ec4899;--pkbg:#fdf2f8;
+  --tx:#1a0a3c;--tm:#4a4a6a;--tl:#9090b0;
+  --bdr:rgba(112,17,246,.1);--sur:#f7f4ff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--sur);color:var(--tx);overflow-x:hidden}
+.hero{position:relative;height:100vh;min-height:580px;background:linear-gradient(150deg,#050010 0%,#160836 45%,#280d58 100%);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 12% 18%,rgba(255,255,255,.55) 0,transparent 100%),radial-gradient(1px 1px at 88% 8%,rgba(255,255,255,.45) 0,transparent 100%),radial-gradient(1px 1px at 55% 48%,rgba(255,255,255,.35) 0,transparent 100%),radial-gradient(1px 1px at 28% 72%,rgba(255,255,255,.4) 0,transparent 100%),radial-gradient(2px 2px at 44% 32%,rgba(171,114,251,.4) 0,transparent 100%),radial-gradient(1px 1px at 75% 85%,rgba(255,255,255,.25) 0,transparent 100%),radial-gradient(1px 1px at 35% 5%,rgba(255,255,255,.3) 0,transparent 100%)}
+.torii-svg{position:absolute;bottom:0;left:50%;transform:translateX(-50%);opacity:.055;width:min(650px,85vw)}
+.petal{position:absolute;border-radius:50% 0 50% 0;animation:fall linear infinite;pointer-events:none}
+@keyframes fall{0%{transform:translateY(-50px) rotate(0deg) scale(1);opacity:1}100%{transform:translateY(110vh) rotate(820deg) scale(.4);opacity:0}}
+.hi{position:relative;z-index:5;text-align:center;padding:2rem 1.5rem;animation:fu .85s ease both}
+@keyframes fu{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+.hero-flag{font-size:3.8rem;display:block;margin-bottom:1rem;animation:fl 4s ease-in-out infinite}
+@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,9vw,6.2rem);font-weight:300;color:#fff;letter-spacing:.03em;line-height:1.05;text-shadow:0 0 80px rgba(171,114,251,.4)}
+.hero-title em{color:var(--pl);font-style:italic;font-weight:400}
+.hero-sub{font-size:.9rem;color:rgba(255,255,255,.55);margin-top:1rem;letter-spacing:.18em;text-transform:uppercase}
+.hero-chips{display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center;margin-top:1.6rem}
+.hc{background:rgba(255,255,255,.07);backdrop-filter:blur(12px);border:1px solid rgba(171,114,251,.3);color:rgba(255,255,255,.85);padding:.3rem .9rem;border-radius:100px;font-size:.8rem;font-weight:500;letter-spacing:.04em;transition:all .2s}
+.hc:hover{background:rgba(171,114,251,.2);border-color:var(--pl)}
+.scroll-cue{position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:rgba(255,255,255,.3);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;animation:bob 2.5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+.scroll-cue::after{content:'';width:1px;height:34px;background:linear-gradient(to bottom,rgba(171,114,251,.5),transparent)}
+.nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr);box-shadow:0 2px 24px rgba(77,29,145,.06)}
+.nav-tabs{display:flex;padding:0 1.2rem;overflow-x:auto;scrollbar-width:none}
+.nav-tabs::-webkit-scrollbar{display:none}
+.nav-tab{padding:.95rem 1.2rem;font-size:.86rem;font-weight:500;color:var(--tm);cursor:pointer;border:none;background:none;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap;font-family:'DM Sans',sans-serif}
+.nav-tab:hover{color:var(--pm)}
+.nav-tab.active{color:var(--pm);border-bottom-color:var(--pm);font-weight:600}
+.city-bar{display:flex;gap:.4rem;padding:.6rem 1.2rem;overflow-x:auto;scrollbar-width:none;background:rgba(240,234,255,.5);border-top:1px solid var(--bdr)}
+.city-bar::-webkit-scrollbar{display:none}
+.city-btn{padding:.28rem .85rem;border-radius:100px;border:1.5px solid var(--bdr);background:white;color:var(--tm);font-size:.79rem;font-weight:500;cursor:pointer;transition:all .2s;white-space:nowrap;font-family:'DM Sans',sans-serif}
+.city-btn:hover{border-color:var(--pm);color:var(--pm)}
+.city-btn.active{background:var(--pm);border-color:var(--pm);color:white;box-shadow:0 4px 14px rgba(112,17,246,.28)}
+.panel{display:none;padding:1.6rem 1.2rem;max-width:920px;margin:0 auto}
+.panel.active{display:block}
+.sc-wrap{margin-bottom:1rem}
+.sc-toggle{display:flex;gap:.5rem;background:white;border-radius:14px;padding:.45rem;box-shadow:0 2px 16px rgba(77,29,145,.08);border:1px solid var(--bdr);margin-bottom:1rem}
+.sc-btn{flex:1;padding:.55rem 1rem;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:.82rem;font-weight:600;cursor:pointer;transition:all .25s;color:var(--tm);background:transparent}
+.sc-btn.active{background:linear-gradient(135deg,var(--dp),var(--pm));color:white;box-shadow:0 4px 16px rgba(112,17,246,.3)}
+.sc-btn:hover:not(.active){background:var(--pa);color:var(--pm)}
+.sc-panel{display:none}
+.sc-panel.active{display:block}
+.day-card{background:white;border-radius:20px;margin-bottom:1rem;overflow:hidden;box-shadow:0 2px 16px rgba(77,29,145,.06);border:1px solid rgba(112,17,246,.07);transition:box-shadow .3s}
+.day-card.hidden{display:none}
+.day-card:hover{box-shadow:0 6px 32px rgba(112,17,246,.11)}
+.day-hd{background:linear-gradient(135deg,var(--dp) 0%,var(--pm) 100%);padding:1.2rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;user-select:none;position:relative;overflow:hidden;transition:filter .2s}
+.day-hd:hover{filter:brightness(1.07)}
+.day-hd::after{content:'';position:absolute;top:-60%;right:-5%;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.07) 0,transparent 70%);border-radius:50%;pointer-events:none}
+.hd-l{position:relative;z-index:1}
+.day-num{font-size:.7rem;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.16em;text-transform:uppercase;margin-bottom:.12rem}
+.day-title{font-family:'Cormorant Garamond',serif;font-size:1.38rem;font-weight:600;color:white;line-height:1.2}
+.day-sub{font-size:.76rem;color:rgba(255,255,255,.6);margin-top:.12rem}
+.hd-r{display:flex;align-items:center;gap:.7rem;position:relative;z-index:1;flex-shrink:0}
+.city-pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2);color:white;padding:.22rem .65rem;border-radius:100px;font-size:.71rem;font-weight:600;letter-spacing:.04em;white-space:nowrap}
+.chev{color:rgba(255,255,255,.6);font-size:1.1rem;transition:transform .35s cubic-bezier(.4,0,.2,1)}
+.day-card.open .chev{transform:rotate(180deg)}
+.day-body{max-height:0;overflow:hidden;transition:max-height .6s cubic-bezier(.4,0,.2,1)}
+.day-card.open .day-body{max-height:9999px}
+.route-map{background:linear-gradient(135deg,#0e0428 0%,#1e0850 100%);padding:1.2rem 1.5rem;overflow-x:auto;scrollbar-width:thin;scrollbar-color:rgba(171,114,251,.3) transparent}
+.route-map::-webkit-scrollbar{height:4px}
+.route-map::-webkit-scrollbar-thumb{background:rgba(171,114,251,.3);border-radius:2px}
+.route-title{font-size:.67rem;font-weight:600;color:rgba(255,255,255,.4);letter-spacing:.16em;text-transform:uppercase;margin-bottom:1rem}
+.route-row{display:flex;align-items:center;gap:0;min-width:max-content}
+.rnode{display:flex;flex-direction:column;align-items:center;gap:.3rem;flex-shrink:0}
+.rnode-circle{width:44px;height:44px;border-radius:50%;background:rgba(171,114,251,.18);border:2px solid rgba(171,114,251,.45);display:flex;align-items:center;justify-content:center;font-size:1.15rem}
+.rnode-circle.luggage-stop{background:rgba(124,58,237,.35);border-color:rgba(167,139,250,.7)}
+.rnode-time{font-size:.7rem;font-weight:700;color:var(--pl);letter-spacing:.04em;white-space:nowrap}
+.rnode-name{font-size:.68rem;color:rgba(255,255,255,.7);white-space:nowrap;max-width:78px;text-align:center;line-height:1.2}
+.rconn{display:flex;flex-direction:column;align-items:center;gap:.25rem;padding:0 .5rem;flex-shrink:0;margin-top:-14px}
+.rconn-line{display:flex;align-items:center;gap:3px}
+.rconn-dash{width:18px;height:1.5px;background:rgba(171,114,251,.3);border-radius:1px}
+.rconn-icon{font-size:.8rem;line-height:1}
+.rconn-label{font-size:.6rem;color:rgba(255,255,255,.35);white-space:nowrap}
+.day-inner{padding:1.2rem 1.5rem;display:flex;flex-direction:column;gap:0}
+.tl-item{display:flex;gap:1rem;position:relative;padding-bottom:1rem}
+.tl-item:last-child{padding-bottom:0}
+.tl-item:last-child .tl-line{display:none}
+.tl-left{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:64px}
+.tl-time{font-size:.72rem;font-weight:700;color:var(--pm);letter-spacing:.03em;text-align:center;line-height:1.2;white-space:nowrap}
+.tl-dot{width:10px;height:10px;border-radius:50%;margin:5px 0;flex-shrink:0;border:2px solid var(--pm);background:white}
+.tl-dot.flight{background:var(--bl);border-color:var(--bl)}
+.tl-dot.transport{background:var(--gn);border-color:var(--gn)}
+.tl-dot.hotel{background:var(--dp);border-color:var(--dp)}
+.tl-dot.booking{background:var(--am);border-color:var(--am)}
+.tl-dot.warning{background:var(--rd);border-color:var(--rd)}
+.tl-dot.food{background:var(--pk);border-color:var(--pk)}
+.tl-dot.note{background:var(--bl);border-color:var(--bl)}
+.tl-dot.luggage{background:#7c3aed;border-color:#7c3aed}
+.tl-line{width:1.5px;flex:1;background:linear-gradient(to bottom,rgba(112,17,246,.15),rgba(112,17,246,.05));min-height:16px}
+.tl-right{flex:1;min-width:0;padding-top:.05rem}
+.tl-sec{padding:.75rem .9rem;border-radius:12px;border-left:3px solid var(--pl);background:var(--pa);margin-bottom:.15rem}
+.tl-sec.transport{background:var(--gnbg);border-left-color:var(--gn)}
+.tl-sec.flight{background:#f0f7ff;border-left-color:var(--bl)}
+.tl-sec.hotel{background:var(--pa);border-left-color:var(--dp)}
+.tl-sec.booking{background:var(--ambg);border-left-color:var(--am)}
+.tl-sec.warning{background:var(--rdbg);border-left-color:var(--rd)}
+.tl-sec.food{background:var(--pkbg);border-left-color:var(--pk)}
+.tl-sec.note{background:var(--blbg);border-left-color:var(--bl)}
+.tl-sec.luggage{background:#f5f3ff;border-left-color:#7c3aed}
+.tl-h{font-weight:600;font-size:.87rem;color:var(--tx);margin-bottom:.3rem;display:flex;align-items:center;gap:.35rem;flex-wrap:wrap;line-height:1.3}
+.tl-sec.transport .tl-h{color:#14532d}
+.tl-sec.flight .tl-h{color:#1e3a8a}
+.tl-sec.hotel .tl-h{color:var(--dp)}
+.tl-sec.booking .tl-h{color:#78350f}
+.tl-sec.warning .tl-h{color:#7f1d1d}
+.tl-sec.food .tl-h{color:#831843}
+.tl-sec.note .tl-h{color:#1e3a8a}
+.tl-sec.luggage .tl-h{color:#4c1d95}
+.tl-sec p,.tl-sec li{font-size:.82rem;color:var(--tm);line-height:1.55}
+.tl-sec ul{list-style:none;display:flex;flex-direction:column;gap:.12rem}
+.tl-sec ul li::before{content:'›';margin-right:.4rem;color:var(--pl);font-weight:700}
+.tl-sec.transport ul li::before{color:var(--gn)}
+.tl-sec.food ul li::before{color:var(--pk)}
+.tl-sec.note ul li::before{color:var(--bl)}
+.tl-sec.booking ul li::before{color:var(--am)}
+.tl-sec.warning ul li::before{color:var(--rd)}
+.tl-sec.luggage ul li::before{color:#7c3aed}
+.tl-link{display:inline-flex;align-items:center;gap:.25rem;font-size:.78rem;color:var(--pm);font-weight:500;text-decoration:none;background:rgba(112,17,246,.08);padding:.15rem .5rem;border-radius:6px;margin:.06rem .04rem 0 0;transition:background .2s}
+.tl-link:hover{background:rgba(112,17,246,.15)}
+.tl-tip{margin-top:.5rem;padding:.38rem .6rem;background:rgba(255,255,255,.7);border-radius:7px;font-size:.78rem;color:var(--dp);border:1px dashed rgba(112,17,246,.15)}
+.bk-header{text-align:center;padding:1.4rem 0 .8rem}
+.bk-header h2{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--dp);font-weight:600}
+.bk-header p{color:var(--tl);font-size:.86rem;margin-top:.3rem}
+.bk-list{display:flex;flex-direction:column;gap:.65rem}
+.bk-item{background:white;border-radius:14px;padding:1rem 1.2rem;display:flex;align-items:center;gap:.9rem;box-shadow:0 2px 12px rgba(77,29,145,.05);border:1px solid var(--bdr);transition:transform .2s,box-shadow .2s}
+.bk-item:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(112,17,246,.1)}
+.bk-icon{width:40px;height:40px;border-radius:11px;background:var(--pa);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.bk-info{flex:1;min-width:0}
+.bk-name{font-weight:600;font-size:.88rem;color:var(--tx);margin-bottom:.18rem}
+.bk-meta{font-size:.76rem;color:var(--tl);display:flex;flex-wrap:wrap;gap:.35rem;align-items:center}
+.plat-tag{background:rgba(0,0,0,.06);color:var(--tm);padding:.16rem .48rem;border-radius:5px;font-size:.72rem;font-weight:500}
+.bk-link{font-size:.79rem;color:var(--pm);font-weight:600;text-decoration:none;background:var(--pa);padding:.22rem .65rem;border-radius:8px;transition:background .2s;white-space:nowrap;flex-shrink:0}
+.bk-link:hover{background:rgba(112,17,246,.15)}
+.panel-heading{font-family:'Cormorant Garamond',serif;font-size:1.9rem;color:var(--dp);font-weight:600;text-align:center;padding:1.4rem 0 .3rem}
+.panel-sub{text-align:center;color:var(--tl);font-size:.86rem;margin-bottom:1.4rem}
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:.85rem}
+.tip-card{background:white;border-radius:14px;padding:1rem 1.1rem;display:flex;gap:.85rem;align-items:flex-start;box-shadow:0 2px 12px rgba(77,29,145,.05);border:1px solid var(--bdr)}
+.tip-icon{font-size:1.4rem;flex-shrink:0;margin-top:.04rem}
+.tip-card h4{font-size:.86rem;font-weight:600;color:var(--tx);margin-bottom:.22rem}
+.tip-card p{font-size:.8rem;color:var(--tm);line-height:1.55}
+.footer{background:linear-gradient(135deg,var(--dp),var(--pm));color:white;text-align:center;padding:3rem 2rem}
+.footer h3{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:400;margin-bottom:.5rem}
+.footer p{opacity:.7;font-size:.86rem;line-height:1.8}
+.route-strip-f{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:.4rem;margin-top:1.4rem;font-size:.8rem;opacity:.6}
+.ra{opacity:.35}
+@media(max-width:640px){.panel{padding:1rem .9rem}.day-inner{padding:1rem}.day-hd{padding:1rem 1.1rem}.day-title{font-size:1.15rem}.city-pill{display:none}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="stars"></div>
+  <svg class="torii-svg" viewBox="0 0 700 420" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <rect x="62" y="98" width="34" height="322" rx="3"/><rect x="604" y="98" width="34" height="322" rx="3"/>
+    <rect x="22" y="98" width="656" height="46" rx="5"/><rect x="32" y="86" width="34" height="26" rx="4"/><rect x="634" y="86" width="34" height="26" rx="4"/>
+    <rect x="32" y="174" width="636" height="32" rx="4"/>
+    <rect x="46" y="58" width="18" height="54" rx="3"/><rect x="636" y="58" width="18" height="54" rx="3"/>
+  </svg>
+  <div class="hi">
+    <span class="hero-flag">🇯🇵</span>
+    <h1 class="hero-title">Japan<br><em>Awaits, Monal</em></h1>
+    <p class="hero-sub">April 20 — May 1, 2025 &nbsp;·&nbsp; 12 Days &nbsp;·&nbsp; 7 Cities</p>
+    <div class="hero-chips">
+      <span class="hc">🗼 Tokyo · Days 1–2, 10–12</span><span class="hc">🏯 Osaka · Days 2–4</span>
+      <span class="hc">🎋 Kyoto · Days 5–6</span><span class="hc">🌄 Nagoya · Day 7</span>
+      <span class="hc">♨️ Hakone · Day 8</span><span class="hc">🗻 Kawaguchiko · Day 9</span>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll to explore</div>
+</div>
+<div class="nav">
+  <div class="nav-tabs">
+    <button class="nav-tab active" data-tab="itinerary">📅 Itinerary</button>
+    <button class="nav-tab" data-tab="bookings">🎟️ Bookings</button>
+    <button class="nav-tab" data-tab="tips">💡 Travel Tips</button>
+  </div>
+  <div class="city-bar" id="cityBar">
+    <button class="city-btn active" data-city="all">🗾 All Days</button>
+    <button class="city-btn" data-city="tokyo">🗼 Tokyo</button>
+    <button class="city-btn" data-city="osaka">🏯 Osaka</button>
+    <button class="city-btn" data-city="kyoto">🎋 Kyoto</button>
+    <button class="city-btn" data-city="nagoya">🌄 Nagoya</button>
+    <button class="city-btn" data-city="hakone">♨️ Hakone</button>
+    <button class="city-btn" data-city="kawaguchiko">🗻 Kawaguchiko</button>
+  </div>
+</div>
+
+<div class="panel active" id="panel-itinerary">
+  <div class="sc-wrap day-card-wrap" data-city="tokyo" id="wrap-1">
+    <div class="day-card open" id="dc-1h">
+      <div class="day-hd" onclick="toggle('1h')">
+        <div class="hd-l">
+          <div class="day-num">Day 1 &nbsp;·&nbsp; April 20</div>
+          <div class="day-title">Arrival · Meiji Shrine · Harajuku · Shibuya 🌆</div>
+          <div class="day-sub">2 plans based on landing time — tap to switch</div>
+        </div>
+        <div class="hd-r"><span class="city-pill">🗼 Tokyo</span><span class="chev">⌄</span></div>
+      </div>
+      <div class="day-body">
+        <div style="padding:.85rem 1.5rem .4rem;background:white;border-bottom:1px solid var(--bdr)">
+          <div class="sc-toggle">
+            <button class="sc-btn active" onclick="switchSc('pm',event)">✈️ Land at 12:00 PM</button>
+            <button class="sc-btn" onclick="switchSc('am',event)">🌅 Land at 7:00 AM</button>
+          </div>
+        </div>
+
+        <!-- 12 PM Scenario -->
+        <div class="sc-panel active" id="sc-pm">
+          <div class="route-map">
+            <div class="route-title">📍 Route — 12 PM Landing · Hotel MYSTAYS Iidabashi</div>
+            <div class="route-row">
+              <div class="rnode"><div class="rnode-time">12:00</div><div class="rnode-circle">✈️</div><div class="rnode-name">Airport Land</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚂</div><div class="rconn-dash"></div></div><div class="rconn-label">80 min</div></div>
+              <div class="rnode"><div class="rnode-time">13:30</div><div class="rnode-circle">🏨</div><div class="rnode-name">MYSTAYS Iidabashi</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚂</div><div class="rconn-dash"></div></div><div class="rconn-label">15 min</div></div>
+              <div class="rnode"><div class="rnode-time">14:30</div><div class="rnode-circle">⛩️</div><div class="rnode-name">Meiji Shrine (Harajuku Stn)</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚶</div><div class="rconn-dash"></div></div><div class="rconn-label">5 min walk</div></div>
+              <div class="rnode"><div class="rnode-time">16:30</div><div class="rnode-circle">🛍️</div><div class="rnode-name">Harajuku (Takeshita St)</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚃</div><div class="rconn-dash"></div></div><div class="rconn-label">2 min</div></div>
+              <div class="rnode"><div class="rnode-time">18:00</div><div class="rnode-circle">🌆</div><div class="rnode-name">Shibuya Sky (Shibuya Stn)</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚶</div><div class="rconn-dash"></div></div><div class="rconn-label">5 min walk</div></div>
+              <div class="rnode"><div class="rnode-time">20:30</div><div class="rnode-circle">🍽️</div><div class="rnode-name">Dinner Shibuya</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚶</div><div class="rconn-dash"></div></div><div class="rconn-label">~10 min</div></div>
+              <div class="rnode"><div class="rnode-time">22:00</div><div class="rnode-circle">🏮</div><div class="rnode-name">Night Walk</div></div>
+            </div>
+          </div>
+          <div class="day-inner">
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">12:00 PM</div><div class="tl-dot flight"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec flight"><div class="tl-h">✈️ Land · Clear Immigration (~30–40 min)</div><ul><li>Buy <strong>Suica IC Card</strong> at the airport — works on ALL metro, JR, buses & convenience stores. Load ¥5,000 to start.</li><li>Narita: Take the <strong>Narita Express (N'EX)</strong> → Shinjuku Station (~80 min, ¥3,070). Then <strong>JR Sobu-Chuo Line</strong> (local yellow train, westbound platform) → Iidabashi Station (2 stops, 5 min, ¥170)</li><li>Haneda: Take <strong>Keikyu Airport Express</strong> → Nihombashi Station (~45 min, ¥650). Then <strong>Tokyo Metro Tozai Line</strong> → Iidabashi Station (4 stops westbound, 8 min, ¥180)</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~1:30 PM</div><div class="tl-dot hotel"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec hotel"><div class="tl-h">🏨 Hotel MYSTAYS Iidabashi — Check In & Rest</div><ul><li>Exit Iidabashi Station West Exit (B3 exit) → 3 min walk to hotel</li><li>Drop bags, freshen up · Early check-in subject to availability</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~2:30 PM</div><div class="tl-dot transport"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec transport"><div class="tl-h">🚂 Iidabashi → Harajuku Station (JR Sobu-Chuo Line)</div><ul><li>Iidabashi Station → <strong>JR Sobu-Chuo Line</strong> (local yellow train, Platform 5, direction Mitaka/Shinjuku)</li><li>Stations: Iidabashi → Ichigaya → Yotsuya → Shinanomachi → Sendagaya → <strong>Harajuku</strong></li><li>5 stops · ~15 min · ¥180</li><li>From Harajuku Station: Walk 2 min north through the torii gate → Meiji Shrine</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~2:45 PM</div><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec"><div class="tl-h">⛩️ Meiji Shrine — Visit First (Beat the Crowd!)</div><ul><li><strong>Inner Garden</strong> — Kiyomasa's Well (power spot 🌿) · <strong>Treasure House</strong> — Imperial artifacts</li><li>🧧 Buy <strong>Red Omamori</strong> charm (luck & protection) · Write wishes on wooden Ema plaques</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~4:30 PM</div><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec"><div class="tl-h">🛍️ Harajuku — Takeshita Street (Cross the bridge from Harajuku Stn)</div><ul><li>📱 <strong>Cas Pace</strong> &nbsp;<a class="tl-link" href="https://share.google/v1AMrIU8hyEi85zsm" target="_blank">📍</a> · 🏠 <strong>Dear You Homewares</strong> &nbsp;<a class="tl-link" href="https://share.google/fLzu04W3qtJm5Wsjf" target="_blank">📍</a></li><li>🧸 <strong>Kiddy Land</strong> &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/z12YM3idsa2Wvv8g6" target="_blank">📍</a> · ⚡ <strong>Harry Potter Shop</strong> &nbsp;<a class="tl-link" href="https://share.google/mJHHFqCdRvvFskM6X" target="_blank">📍</a></li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~5:45 PM</div><div class="tl-dot transport"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec transport"><div class="tl-h">🚃 Harajuku → Shibuya (JR Yamanote Line · 1 stop)</div><ul><li>Harajuku Station → <strong>JR Yamanote Line</strong> (Platform 2, direction Shibuya/Osaki) → <strong>Shibuya Station</strong></li><li>1 stop · 2 min · ¥150 &nbsp;·&nbsp; OR simply walk south 15 min via Omotesando</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~6:00 PM</div><div class="tl-dot booking"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec booking"><div class="tl-h">🌆 Shibuya Sky — Pre-Book (4–6 PM golden hour ideal)</div><ul><li>Located in Shibuya Scramble Square Tower — take elevator inside the building</li><li>📸 <strong>Tip:</strong> Starbucks Shibuya Tsutaya (2F, overlooking crossing) = best street-level Shibuya shot!</li><li>Alt: <strong>Shibuya Magnet Rooftop Bar</strong> — buy a drink, free view &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/Ye4G8cqZAe23TTg8A" target="_blank">📍</a> · OR <strong>Tokyo Gov. Building</strong> (totally free + night show)</li><li><a class="tl-link" href="https://www.shibuya-scramble-square.com/sky/ticket/" target="_blank">🎫 Book Shibuya Sky Here</a></li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~8:00 PM</div><div class="tl-dot food"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec food"><div class="tl-h">🍽️ Dinner in Shibuya — Pick One</div><ul><li>🇮🇳 <strong>Nataraj Harajuku</strong> (Indian) &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/1aFXUKVxyPiuTZej6" target="_blank">📍</a></li><li>🍜 <strong>Oreryu Shio-ramen</strong> (Tokyo #1 Ramen) &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/frvBZ1zw29ySVvzt5" target="_blank">📍</a></li><li>🍣 <strong>Uobei Sushi ⭐</strong> (Conveyor belt — highly recommended!) &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/mR86manfBLgtbuUY9" target="_blank">📍</a></li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~10:00 PM</div><div class="tl-dot note"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec note"><div class="tl-h">🌃 Night Walk — Choose One</div><ul><li>🏮 <strong>Omoide Yokocho</strong> (Memory Lane) &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/YfTiRbGKKuC36RbR9h" target="_blank">📍</a> &nbsp;<a class="tl-link" href="https://www.youtube.com/shorts/mLqXovRbwY8" target="_blank">▶ Watch</a></li><li>🌟 <strong>Shibuya Center-gai</strong> (Bustling nightlife) &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/5cv5GCWyrd1HVevw9" target="_blank">📍</a></li></ul></div></div></div>
+          </div>
+        </div>
+
+        <!-- 7 AM Scenario -->
+        <div class="sc-panel" id="sc-am">
+          <div class="route-map">
+            <div class="route-title">📍 Route — 7 AM Landing · Luggage at Hotel Lockers</div>
+            <div class="route-row">
+              <div class="rnode"><div class="rnode-time">07:00</div><div class="rnode-circle">✈️</div><div class="rnode-name">Airport Land</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚂</div><div class="rconn-dash"></div></div><div class="rconn-label">80–90 min</div></div>
+              <div class="rnode"><div class="rnode-time">09:00</div><div class="rnode-circle luggage-stop">🧳</div><div class="rnode-name">MYSTAYS (drop bags)</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚂</div><div class="rconn-dash"></div></div><div class="rconn-label">15 min</div></div>
+              <div class="rnode"><div class="rnode-time">09:30</div><div class="rnode-circle">⛩️</div><div class="rnode-name">Meiji Shrine (Harajuku Stn)</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚶</div><div class="rconn-dash"></div></div><div class="rconn-label">5 min</div></div>
+              <div class="rnode"><div class="rnode-time">12:00</div><div class="rnode-circle">🍱</div><div class="rnode-name">Lunch near Meiji</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚶</div><div class="rconn-dash"></div></div><div class="rconn-label">5 min walk</div></div>
+              <div class="rnode"><div class="rnode-time">13:00</div><div class="rnode-circle">🛍️</div><div class="rnode-name">Harajuku (Takeshita St)</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚃</div><div class="rconn-dash"></div></div><div class="rconn-label">2 min</div></div>
+              <div class="rnode"><div class="rnode-time">15:30</div><div class="rnode-circle">🌆</div><div class="rnode-name">Shibuya</div></div>
+              <div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">🚶</div><div class="rconn-dash"></div></div><div class="rconn-label">5 min</div></div>
+              <div class="rnode"><div class="rnode-time">18:30</div><div class="rnode-circle">🍽️</div><div class="rnode-name">Dinner Shibuya</div></div>
+            </div>
+          </div>
+          <div class="day-inner">
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">7:00 AM</div><div class="tl-dot flight"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec flight"><div class="tl-h">✈️ Land · Clear Immigration</div><ul><li>Buy <strong>Suica IC Card</strong> at airport (at the vending machines near station gates)</li><li>Narita → N'EX to Shinjuku (~80 min) → JR Sobu-Chuo Line → Iidabashi</li><li>Haneda → Keikyu Airport Express → Nihombashi → Tozai Line → Iidabashi</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">9:00–9:30</div><div class="tl-dot luggage"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec luggage"><div class="tl-h">🧳 Hotel MYSTAYS Iidabashi — Drop Luggage</div><ul><li>Room won't be ready until 3 PM — <strong>leave bags at the front desk</strong> (free, they'll tag them)</li><li>Pick up when you return in the afternoon before check-in</li><li>Grab breakfast at <strong>7-Eleven or Lawson</strong> right near the hotel — Japanese conbini food is genuinely excellent</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~9:30 AM</div><div class="tl-dot transport"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec transport"><div class="tl-h">🚂 Iidabashi → Harajuku (JR Sobu-Chuo Line, 5 stops)</div><ul><li>Iidabashi Station → <strong>JR Sobu-Chuo Line</strong> (local yellow, Platform 5, direction Mitaka)</li><li>Iidabashi → Ichigaya → Yotsuya → Shinanomachi → Sendagaya → <strong>Harajuku</strong></li><li>5 stops · ~15 min · ¥180 · walk 2 min to Meiji Shrine torii gate</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~9:45 AM</div><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec"><div class="tl-h">⛩️ Meiji Shrine (crowd-free at this hour!)</div><ul><li>Inner Garden (Kiyomasa's Well) · Treasure House · Red Omamori charm · Ema wooden plaques</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~12:00 PM</div><div class="tl-dot food"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec food"><div class="tl-h">🍱 Lunch near Meiji Shrine / Harajuku</div><ul><li>🍜 Kyushu Jangara Ramen &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/RW7tdFPXSkHJ4DLW8" target="_blank">📍</a> · ☕ Café Mori no Terrace &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/QdB3yEF7yzSmXBpD9" target="_blank">📍</a></li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~1:00 PM</div><div class="tl-dot"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec"><div class="tl-h">🛍️ Harajuku Takeshita Street (cross the bridge from Harajuku Stn)</div><ul><li>📱 <strong>Cas Pace</strong> · 🏠 <strong>Dear You Homewares</strong> · 🧸 <strong>Kiddy Land</strong> · ⚡ <strong>Harry Potter Shop</strong></li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~3:00 PM</div><div class="tl-dot transport"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec transport"><div class="tl-h">🚃 Harajuku → Shibuya (JR Yamanote, 1 stop · 2 min)</div><ul><li>Harajuku Station Platform 2 (Yamanote Line inner loop) → Shibuya Station · ¥150</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~3:30 PM</div><div class="tl-dot booking"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec booking"><div class="tl-h">🌆 Shibuya Crossing + Sky Options</div><ul><li>📸 Starbucks Shibuya Tsutaya 2F bay windows — best crossing shot! No purchase needed to enter</li><li><strong>Shibuya Magnet Rooftop Bar</strong> — free entry, buy a drink for the crossing view &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/Ye4G8cqZAe23TTg8A" target="_blank">📍</a></li><li><strong>Tokyo Gov. Building</strong> — free observatory + night light show (book Shibuya Sky here if going: &nbsp;<a class="tl-link" href="https://www.shibuya-scramble-square.com/sky/ticket/" target="_blank">🎫 Book</a>)</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~6:00 PM</div><div class="tl-dot hotel"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec hotel"><div class="tl-h">🏨 Return to Hotel MYSTAYS — Check In</div><ul><li>Shibuya Station → <strong>JR Sobu-Chuo Line</strong> (eastbound, direction Tokyo/Chiba) → Iidabashi (5 stops, ~15 min, ¥180)</li><li>Room now ready — official check-in, unpack &amp; freshen up</li></ul></div></div></div>
+            <div class="tl-item"><div class="tl-left"><div class="tl-time">~7:00 PM</div><div class="tl-dot food"></div><div class="tl-line"></div></div><div class="tl-right"><div class="tl-sec food"><div class="tl-h">🍽️ Dinner in Shibuya (go back) or near Hotel</div><ul><li>🍣 <strong>Uobei Sushi ⭐</strong> &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/mR86manfBLgtbuUY9" target="_blank">📍</a> · 🍜 <strong>Oreryu Ramen</strong> &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/frvBZ1zw29ySVvzt5" target="_blank">📍</a></li><li>🏮 Omoide Yokocho on the way if you have energy &nbsp;<a class="tl-link" href="https://maps.app.goo.gl/YfTiRbGKKuC36RbR9h" target="_blank">📍</a></li></ul></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="days-wrap"></div>
+</div>
+
+<div class="panel" id="panel-bookings">
+  <div class="bk-header"><h2>Pre-Bookings 🎟️</h2><p>All confirmed & recommended bookings for the trip</p></div>
+  <div class="bk-list" id="bk-wrap"></div>
+</div>
+<div class="panel" id="panel-tips">
+  <h2 class="panel-heading">Essential Travel Tips 💡</h2>
+  <p class="panel-sub">Everything you need for a smooth 12-day Japan adventure</p>
+  <div class="tips-grid" id="tips-wrap"></div>
+</div>
+<div class="footer">
+  <h3>Have a magical trip, Monal! 🌸</h3>
+  <p>Torii gates at sunrise · Shibuya at dusk · Mt. Fuji views · Onsen under the stars</p>
+  <div class="route-strip-f">
+    <span>🗼 Tokyo</span><span class="ra">→</span><span>🏯 Osaka</span><span class="ra">→</span>
+    <span>🎋 Kyoto</span><span class="ra">→</span><span>🌄 Nagoya</span><span class="ra">→</span>
+    <span>♨️ Hakone</span><span class="ra">→</span><span>🗻 Kawaguchiko</span><span class="ra">→</span>
+    <span>🗼 Tokyo</span><span class="ra">→</span><span>🏠 Home</span>
+  </div>
+  <p style="margin-top:1.4rem;font-size:.76rem;opacity:.45">いってらっしゃい — Bon Voyage! &nbsp;·&nbsp; April 20 – May 1, 2025</p>
+</div>
+
+<script>
+const T={walk:'🚶',metro:'🚇',train:'🚂',shink:'🚄',bus:'🚌',taxi:'🚕',flight:'✈️',boat:'⛵',free:'—',cable:'🚠',ferry:'🛳️',tram:'🚃'};
+
+const days=[
+
+{day:2,date:'April 21',city:'osaka',cityLabel:'Tokyo → Osaka',
+ title:'Asakusa + Teamlab 8:30 AM → Shinkansen → Osaka Evening 🎨',
+ sub:'⚠️ Luggage at Tokyo Station Lockers · Teamlab 8:30 · Nozomi 12 PM · Osaka Night',
+ route:[
+  {time:'06:00',emoji:'🧳',name:'Luggage → Tokyo Stn Lockers'},
+  {conn:{icon:T.train,label:'15 min'}},
+  {time:'06:30',emoji:'⛩️',name:'Asakusa (Senso-ji)'},
+  {conn:{icon:T.metro,label:'20 min'}},
+  {time:'08:30',emoji:'🎨',name:'Teamlab Borderless (Kamiyacho Stn)'},
+  {conn:{icon:T.metro,label:'15 min'}},
+  {time:'11:30',emoji:'🧳',name:'Collect bags Tokyo Stn'},
+  {conn:{icon:T.shink,label:'2h 22m Nozomi'}},
+  {time:'14:30',emoji:'🚉',name:'Shin-Osaka'},
+  {conn:{icon:T.metro,label:'7 min Midosuji'}},
+  {time:'15:00',emoji:'🏨',name:'Hotel Keihan Yodoyabashi'},
+  {conn:{icon:T.metro,label:'5 min'}},
+  {time:'17:00',emoji:'⛩️',name:'Hozenji Yokocho (Namba Stn)'},
+  {conn:{icon:T.metro,label:'10 min'}},
+  {time:'18:00',emoji:'🏯',name:'Osaka Castle (Tanimachi 4-chome)'},
+  {conn:{icon:T.walk,label:'15 min'}},
+  {time:'19:15',emoji:'🛍️',name:'Shinsaibashi'},
+  {conn:{icon:T.walk,label:'8 min'}},
+  {time:'20:00',emoji:'🌆',name:'Amerikamura'},
+  {conn:{icon:T.walk,label:'5 min'}},
+  {time:'21:00',emoji:'🏮',name:'Dotonbori'}
+ ],
+ tl:[
+  {time:'05:30–06:00',type:'luggage',h:'🧳 Luggage Plan — Store at Tokyo Station FIRST',items:[
+    'Check out of Hotel MYSTAYS Iidabashi',
+    '<strong>Route to Tokyo Station:</strong> Iidabashi Stn → JR Sobu-Chuo Line (local yellow, Platform 3/4, direction Akihabara/Chiba) → Suidobashi → Ochanomizu → Akihabara → Kanda → <strong>Tokyo Station</strong> · 5 stops · ~15 min · ¥170',
+    '🧳 Store bags: <strong>Tokyo Station Coin Lockers — Yaesu South Gate B1F</strong> or Central Gate area · Large locker ¥700/day · Medium ¥500/day · Pay by IC card (Suica) · Open from 5:30 AM',
+    '📸 Take a photo of your locker number + the gate name before leaving!'
+  ]},
+  {time:'06:30',type:'activity',h:'⛩️ Asakusa — Senso-ji & Nakamise Street',items:[
+    '<strong>Route from Tokyo Station → Asakusa:</strong> Tokyo Stn → <strong>JR Yamanote Line</strong> (Platform 3/4, inner loop northbound) → Ueno Station (3 stops, ~5 min, ¥160)',
+    'Ueno Station → <strong>Tokyo Metro Ginza Line</strong> (Exit 7, follow orange "G" signs) → Tawaramachi → <strong>Asakusa Station</strong> · 2 stops · ~4 min · ¥170',
+    'Total Tokyo Station → Asakusa: ~25 min',
+    'Asakusa Station Exit A4 → 2 min walk → Kaminarimon Gate → Senso-ji Temple → Nakamise-dori shopping street',
+    'Magical with no crowds this early! Allow ~1.5 hrs'
+  ]},
+  {time:'08:00',type:'transport',h:'🚇 Asakusa → Teamlab Borderless (Azabudai Hills)',items:[
+    'Asakusa Station → <strong>Tokyo Metro Ginza Line</strong> (G, orange, direction Shibuya — same platform as arrival, turn around)',
+    'Asakusa → Ueno → Ueno-Hirokoji → Suehirocho → Kanda → Mitsukoshimae → Nihombashi → Kyobashi → <strong>Ginza Station</strong> · 8 stops · ~12 min',
+    'At Ginza Station: follow signs to <strong>Hibiya Line (H, silver)</strong> — same station, different platform (takes ~3 min to change)',
+    'Ginza (H08) → Hibiya (H07) → <strong>Kamiyacho Station (H06)</strong> · 2 stops · ~4 min · ¥200 total',
+    'Kamiyacho Station <strong>Exit 3</strong> → walk south ~10 min → <strong>Azabudai Hills</strong> (Teamlab Borderless entrance)',
+    'Total Asakusa → Teamlab: ~30 min'
+  ]},
+  {time:'08:30',type:'booking',h:'🎨 Teamlab Borderless — 8:30 AM Entry!',items:[
+    'Immersive digital art world — allow ~2.5–3 hrs',
+    '<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F20707-teamlab-borderless-admission-ticket-tokyo%2F" target="_blank">🎫 Book via Klook</a>'
+  ]},
+  {time:'11:30',type:'luggage',h:'🧳 Collect Bags from Tokyo Station Lockers',items:[
+    '<strong>Teamlab (Kamiyacho) → Tokyo Station:</strong> Kamiyacho → <strong>Hibiya Line</strong> (direction Kita-Senju, northbound) → Kasumigaseki (1 stop) → <strong>Marunouchi Line (M, red)</strong> → Tokyo Station · 2 stops · ~8 min total · ¥200',
+    'Collect bags from Yaesu/Central Gate B1F lockers',
+    'Use toilets and buy onigiri/lunch from the massive Tokyo Station food basement (B1F Gransta) for the Shinkansen ride!'
+  ]},
+  {time:'12:00',type:'transport',h:'🚄 Shinkansen Nozomi — Tokyo → Shin-Osaka',items:[
+    'Tokyo Station <strong>Shinkansen platforms 14–19</strong> (follow the large blue Shinkansen signs, requires going through a separate ticket gate)',
+    'Train: <strong>Nozomi</strong> (fastest, no extra charge with reserved seat) · Non-reserved car available but reserved recommended',
+    'Tokyo (12:00) → Shin-Osaka (~14:22) · ~2 hrs 22 min · ¥14,720',
+    '🍱 Eat your station food in the train — Shinkansen has a tray table!'
+  ]},
+  {time:'14:30',type:'transport',h:'🚇 Shin-Osaka → Hotel Keihan Yodoyabashi',items:[
+    'At Shin-Osaka Station: follow signs to <strong>Osaka Metro Midosuji Line (M, red)</strong> underground',
+    'Shin-Osaka → Nakatsu → Umeda → <strong>Yodoyabashi Station</strong> · 3 stops · ~7 min · ¥240',
+    'Yodoyabashi Station <strong>Exit 5</strong> → 3 min walk → <strong>Hotel Keihan Yodoyabashi</strong>'
+  ]},
+  {time:'15:00',type:'hotel',h:'🏨 Check-In — Hotel Keihan Yodoyabashi',items:['Drop bags, freshen up · Well-located for Osaka metro access']},
+  {time:'17:00',type:'transport',h:'🚇 Hotel → Hozenji Yokocho (Namba)',items:[
+    'Yodoyabashi Station → <strong>Midosuji Line (M, red)</strong> southbound → <strong>Namba Station</strong> · 2 stops · ~5 min · ¥230',
+    'Namba Station <strong>Exit 14</strong> → walk 5–7 min via Dotonbori → <strong>Hozenji Yokocho</strong> (moss-covered Fudo Myoo statue alley)'
+  ]},
+  {time:'17:00',type:'activity',h:'⛩️ Hozenji Yokocho — Moss-Covered Lantern Alley',items:["Splash water on the ancient moss-covered Fudo Myoo statue for good luck!","Stone-paved alley with lanterns — very atmospheric, quick 15 min visit"]},
+  {time:'18:00',type:'transport',h:'🚇 Namba → Osaka Castle (Tanimachi 4-chome)',items:[
+    'Namba Station → <strong>Sennichimae Line (S)</strong> → Tanimachi 9-chome → <strong>Tanimachi Line (T, purple)</strong> → <strong>Tanimachi 4-chome Station</strong> · ~10 min · ¥240',
+    'OR faster: Namba → <strong>Chuo Line (C, green)</strong> → Tanimachi 4-chome directly · 3 stops · ~6 min · ¥230',
+    'Tanimachi 4-chome Station Exit 1B → walk northeast ~12 min → <strong>Osaka Castle Otemon Gate</strong>'
+  ]},
+  {time:'18:00',type:'booking',h:'🏯 Osaka Castle + Hokoku Shrine (5:15–6:30 PM)',items:['Iconic 5-storey castle with moat & grounds','<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F30110-osaka-castle-ticket%2F" target="_blank">🎫 Book via Klook</a>']},
+  {time:'19:15',type:'activity',h:'🛍️ Shinsaibashi → Amerikamura → Dotonbori',items:[
+    'Walk downhill from Osaka Castle via Otemon Gate → 15 min walk southwest → Shinsaibashi-suji arcade entrance',
+    'Walk south 8 min on Midosuji Blvd → Amerikamura triangle (vintage shops, streetwear)',
+    '3 min west → Tachibana-dori (Orange Street) · Then 5 min east walk → <strong>Dotonbori Canal</strong> (Glico sign, Ebisu Bridge)'
+  ]},
+  {time:'21:00',type:'food',h:'🏮 Dotonbori — Night Food & Glico Sign',items:['📸 Must-do: Glico Running Man sign · Ebisu Bridge views','Try: Takoyaki · Okonomiyaki · Street skewers · Fresh crab legs']}
+ ]
+},
+
+{day:3,date:'April 22',city:'osaka',cityLabel:'Osaka (Nara Day Trip)',
+ title:'Namba Yasaka → Nara Day Trip + Umeda Sky + Teamlab Botanical 🦌',
+ sub:'Namba Yasaka 7:30 AM · Nara · 5:30 PM Train Back · Umeda · Teamlab',
+ route:[
+  {time:'07:30',emoji:'🦁',name:'Namba Yasaka (Namba Stn)'},
+  {conn:{icon:T.walk,label:'10 min'}},
+  {time:'08:30',emoji:'🚂',name:'Osaka-Namba Stn (Kintetsu)'},
+  {conn:{icon:T.train,label:'~40 min Kintetsu'}},
+  {time:'09:15',emoji:'🦌',name:'Kintetsu-Nara Stn'},
+  {conn:{icon:T.walk,label:'5 min'}},
+  {time:'09:20',emoji:'🦌',name:'Nara Deer Park'},
+  {conn:{icon:T.walk,label:'10 min'}},
+  {time:'10:00',emoji:'🛕',name:'Todai-ji'},
+  {conn:{icon:T.walk,label:'15 min'}},
+  {time:'11:30',emoji:'🌿',name:'Mt Wakakusa'},
+  {conn:{icon:T.walk,label:'5 min'}},
+  {time:'13:00',emoji:'🍡',name:'Nakatanidou'},
+  {conn:{icon:T.walk,label:'10 min'}},
+  {time:'14:00',emoji:'⛩️',name:'Ukimido Pavilion'},
+  {conn:{icon:T.train,label:'5:30 PM train'}},
+  {time:'18:15',emoji:'🏙️',name:'Namba (arrive)'},
+  {conn:{icon:T.metro,label:'5 min Midosuji'}},
+  {time:'19:00',emoji:'🌃',name:'Umeda Sky'},
+  {conn:{icon:T.metro,label:'~20 min Midosuji'}},
+  {time:'21:00',emoji:'🌸',name:'teamLab Botanical (Nagai Stn)'}
+ ],
+ tl:[
+  {time:'07:20',type:'transport',h:'🚇 Hotel → Namba (Midosuji Line · 5 min)',items:[
+    'Yodoyabashi Station → <strong>Midosuji Line (M, red)</strong> southbound → <strong>Namba Station</strong> · 2 stops · ~5 min · ¥230',
+    'Namba Station <strong>Exit 14 (south)</strong> → walk 6–7 min southwest → <strong>Namba Yasaka Shrine</strong>'
+  ]},
+  {time:'07:30',type:'activity',h:'🦁 Namba Yasaka Shrine — First Stop Before Nara!',items:['Iconic giant lion-head stage — unmissable for photos 📸 · ~20 min visit']},
+  {time:'08:15',type:'transport',h:'🚂 Namba → Kintetsu-Nara (Kintetsu Nara Line)',items:[
+    '⚠️ <strong>Important:</strong> You need <strong>Osaka-Namba Station (Kintetsu)</strong> — NOT Namba Subway Station. It is a 3-minute walk east from the subway exit',
+    '<strong>Kintetsu Nara Line</strong> from Osaka-Namba (Platforms 1–4) → <strong>Kintetsu-Nara Station</strong>',
+    'Take an <strong>Express</strong> or <strong>Limited Express</strong> train (faster — stops less) · ~40 min · ¥680',
+    'Kintetsu-Nara Station Exit 2 → walk 5 min east → <strong>Nara Deer Park</strong>'
+  ]},
+  {time:'09:00',type:'activity',h:'🦌 Nara Deer Park · Todai-ji · Mt Wakakusa',items:[
+    'Friendly deer roam freely — buy shika-senbei crackers (¥200) from vendors; they bow back!',
+    '🛕 <strong>Todai-ji Temple</strong> (10 AM): Japan\'s largest bronze Buddha (15 m!) · Entry ¥1,000 · Nandai-mon gate guardian statues',
+    '🌿 <strong>Mt Wakakusa</strong> (11:30 AM): Gentle hill, panoramic views over Nara — short easy climb',
+    '🍡 <strong>Nakatanidou</strong> (1 PM): Famous mochi shop — watch staff pound fresh yomogi mochi by hand! Must-try',
+    '⛩️ <strong>Ukimido Pavilion</strong> (2 PM): Beautiful floating pavilion on Sagiike Pond — very photogenic'
+  ]},
+  {time:'17:30',type:'transport',h:'🚂 5:30 PM Train — Kintetsu-Nara → Osaka-Namba',items:[
+    '<strong>Kintetsu-Nara Station</strong> → Kintetsu Nara Line → <strong>Osaka-Namba Station</strong> · ~40 min · ¥680',
+    'Arrive Namba ~6:15 PM',
+    'From Osaka-Namba → walk 3 min west → <strong>Namba Subway Station</strong> → <strong>Midosuji Line (M)</strong> northbound → <strong>Umeda Station</strong> · 2 stops · ~5 min · ¥230'
+  ]},
+  {time:'19:00',type:'booking',h:'🌃 Umeda Sky Building — Floating Garden Observatory',items:[
+    'Umeda Station <strong>Exit 4</strong> → walk north ~10 min (follow the twin tower signs, ~600m) → Umeda Sky Building',
+    'Spectacular rooftop observatory — best as the city lights up!',
+    '<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F35861-umeda-sky-building-kuchu-teien-observatory-ticket%2F" target="_blank">🎫 Book via Klook</a>'
+  ]},
+  {time:'20:30',type:'transport',h:'🚇 Umeda → teamLab Botanical (Nagai Station)',items:[
+    'Umeda Station → <strong>Midosuji Line (M, red)</strong> southbound (direction Nakamozu)',
+    'Umeda → Shinsaibashi → Namba → Dobutsuen-mae → Tanimachi 9-chome → ... → <strong>Nagai Station</strong>',
+    '~9 stops · ~20 min · ¥340',
+    'Nagai Station Exit 1 → walk ~10 min east through the park → <strong>teamLab Botanical Garden Osaka entrance</strong>'
+  ]},
+  {time:'21:00',type:'booking',h:'🌸 teamLab Botanical Garden Osaka',items:['Illuminated night botanical garden · Completely different to Teamlab Borderless','<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F73632-teamlab-botanical-garden-osaka%2F" target="_blank">🎫 Book via Klook</a>']},
+  {time:'After',type:'transport',h:'🚇 Nagai → Hotel Keihan Yodoyabashi',items:[
+    'Nagai Station → <strong>Midosuji Line (M)</strong> northbound → <strong>Yodoyabashi Station</strong> · ~9 stops · ~20 min · ¥340'
+  ]}
+ ]
+},
+
+{day:4,date:'April 23',city:'osaka',cityLabel:'Osaka → Kyoto',
+ title:'Temple Crawl · Kuromon Market · Aquarium → Kyoto Night 🐠',
+ sub:'⚠️ Checkout Day — Bags held at Hotel · JR to Kyoto Eve · Gion + Pontocho',
+ route:[
+  {time:'06:00',emoji:'🧳',name:'Bags at Hotel (Keihan)'},
+  {conn:{icon:T.bus,label:'Minoo Line + walk'}},
+  {time:'06:30',emoji:'⛩️',name:'Katsuo-ji (Minoo Stn)'},
+  {conn:{icon:T.train,label:'Hankyu + Tanimachi'}},
+  {time:'08:30',emoji:'🛕',name:'Shitennoji (Shitennojimae Stn)'},
+  {conn:{icon:T.metro,label:'Tanimachi → Nankai'}},
+  {time:'11:00',emoji:'⛩️',name:'Sumiyoshi Taisha'},
+  {conn:{icon:T.train,label:'Nankai → Namba'}},
+  {time:'12:00',emoji:'🐟',name:'Kuromon Market (Nipponbashi)'},
+  {conn:{icon:T.metro,label:'Tanimachi Line'}},
+  {time:'14:00',emoji:'🎨',name:'Nakazakicho (Nakazakinishi Stn)'},
+  {conn:{icon:T.metro,label:'Tanimachi + Chuo'}},
+  {time:'15:30',emoji:'🐠',name:'Aquarium (Osakako Stn)'},
+  {conn:{icon:T.walk,label:'3 min'}},
+  {time:'17:30',emoji:'🎡',name:'Ferris Wheel'},
+  {conn:{icon:T.metro,label:'collect bags · JR'}},
+  {time:'19:30',emoji:'🚄',name:'→ Kyoto (Osaka Stn)'},
+  {conn:{icon:T.walk,label:'Keihan + walk'}},
+  {time:'21:00',emoji:'👘',name:'Gion (Shijo Stn)'}
+ ],
+ tl:[
+  {time:'Morning',type:'luggage',h:'🧳 Luggage Plan — Bags Stay at Hotel Until Evening',items:[
+    '<strong>Today is checkout day from Hotel Keihan Yodoyabashi</strong>',
+    'Ask the front desk to hold your bags after checkout (free) — you\'ll collect them in the evening before the train to Kyoto',
+    'This way you travel light all day!'
+  ]},
+  {time:'06:00',type:'transport',h:'🚌 Hotel → Katsuo-ji Temple (Minoo)',items:[
+    'Yodoyabashi → <strong>Midosuji Line (M)</strong> → Umeda (1 stop north, 3 min, ¥230)',
+    'Umeda → <strong>Osaka-Umeda Station (Hankyu)</strong> (connected underground) → <strong>Hankyu Minoo Line</strong> (direction Minoo) → <strong>Minoo Station</strong> · ~25 min · ¥220',
+    'Minoo Station → walk north ~20 min up the valley path (beautiful forested trail) OR taxi ¥800–1,000',
+    'Then forest walk ~25 min uphill to <strong>Katsuo-ji Temple</strong>'
+  ]},
+  {time:'06:30',type:'activity',h:'⛩️ Katsuo-ji Temple — Daruma Doll Temple',items:["Hundreds of red daruma dolls throughout the mountain temple grounds","Serene early morning atmosphere — unique & very peaceful"]},
+  {time:'08:00',type:'transport',h:'🚂 Minoo → Shitennoji (Hankyu + Tanimachi Line)',items:[
+    'Minoo Station → <strong>Hankyu Minoo Line</strong> → Osaka-Umeda · ~25 min',
+    'Umeda → <strong>Osaka Metro Tanimachi Line (T, purple)</strong> (direction Komagabayashi-Yao) → <strong>Shitennojimae-Yuhigaoka Station</strong> · ~20 min · ¥280',
+    'Exit 4 → 1 min walk → Shitennoji West Gate (直接目の前です)'
+  ]},
+  {time:'08:30',type:'activity',h:'🛕 Shitennoji — Japan\'s Oldest Temple',items:["Founded 593 AD by Prince Shotoku · Stunning pagoda & beautiful garden","One of Japan's oldest Buddhist temples"]},
+  {time:'10:30',type:'transport',h:'🚂 Shitennoji → Sumiyoshi Taisha (via Tennoji + Nankai)',items:[
+    'Shitennojimae-Yuhigaoka → <strong>Tanimachi Line (T)</strong> → Tennoji Station · 3 stops · ~5 min',
+    'Tennoji Station → <strong>JR Osaka Loop Line</strong> (outer, direction Shin-Imamiya) → Shin-Imamiya · 1 stop · 2 min',
+    'Shin-Imamiya → <strong>Nankai Main Line</strong> (direction Wakayama/Rinku) → <strong>Sumiyoshi-Taisha Station</strong> · 3 stops · ~7 min · ¥230',
+    'Exit station → walk 1 min → iconic arched <strong>Taiko-bashi bridge</strong> in front of the shrine!'
+  ]},
+  {time:'11:00',type:'activity',h:'⛩️ Sumiyoshi Taisha Shrine',items:["One of Japan's oldest & most important Shinto shrines","Famous arched Taiko-bashi bridge · Unique architecture unlike typical shrines"]},
+  {time:'11:45',type:'transport',h:'🚂 Sumiyoshi Taisha → Kuromon Market (Namba area)',items:[
+    'Sumiyoshi-Taisha Station → <strong>Nankai Main Line</strong> northbound → <strong>Namba Station (Nankai)</strong> · ~7 min · ¥290',
+    'From Namba: walk 5 min east → <strong>Kuromon Ichiba Market</strong> (2-4-1 Nipponbashi, Chuo-ku — between Namba and Nipponbashi stations)'
+  ]},
+  {time:'12:00',type:'food',h:"🐟 Kuromon Ichiba Market + Doguyasuji",items:["170+ stalls, 580 m — Osaka's legendary food market","Try: Fresh sashimi, tamagoyaki, tofu stalls, skewers","<strong>Sennichimae Doguyasuji</strong> next door: Japan's famous cooking tools street — knives, pots, tableware"]},
+  {time:'13:30',type:'transport',h:'🚇 Kuromon → Nakazakicho (Tanimachi Line)',items:[
+    'Nipponbashi Station → <strong>Sennichimae Line (Se)</strong> → Tanimachi 9-chome · 2 stops · ~4 min',
+    'Tanimachi 9-chome → <strong>Tanimachi Line (T, purple)</strong> northbound → <strong>Nakazakinishi Station</strong> · 4 stops · ~8 min · ¥230',
+    'Exit 2 → 2 min walk → Nakazakicho vintage café district'
+  ]},
+  {time:'14:00',type:'activity',h:'🎨 Nakazakicho — Osaka\'s Artsy Quarter',items:['Vintage cafés, indie boutiques, murals, bookshops · Osaka\'s most charming creative neighbourhood']},
+  {time:'15:00',type:'transport',h:'🚇 Nakazakicho → Osaka Aquarium (Osakako)',items:[
+    'Nakazakinishi → <strong>Tanimachi Line (T)</strong> southbound → Morinomiya · 5 stops · ~12 min',
+    'Morinomiya → <strong>JR Osaka Loop Line</strong> → Bentencho · 2 stops · ~5 min',
+    'Bentencho → <strong>Osaka Metro Chuo Line (C, green)</strong> westbound → <strong>Osakako Station</strong> · 3 stops · ~6 min · ¥240',
+    'Osakako Station <strong>Exit 1</strong> → walk 5 min north → <strong>Kaiyukan Aquarium entrance</strong>'
+  ]},
+  {time:'15:30',type:'booking',h:'🐠 Osaka Aquarium Kaiyukan ⭐',items:["One of the world's best aquariums — giant whale shark tank! · Allow ~2 hrs",'<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F598-osaka-aquarium-kaiyukan-japan%2F" target="_blank">🎫 Book via Klook</a>']},
+  {time:'17:30',type:'activity',h:'🎡 Tempozan Giant Ferris Wheel (3 min walk from Aquarium)',items:['Great views over Osaka Bay at dusk']},
+  {time:'18:30',type:'luggage',h:'🧳 Return to Hotel — Collect Your Bags',items:[
+    '<strong>Osakako → Hotel:</strong> Osakako → <strong>Chuo Line (C)</strong> eastbound → Honmachi · ~10 min',
+    'Honmachi → <strong>Midosuji Line (M)</strong> northbound → <strong>Yodoyabashi</strong> · 2 stops · ~4 min',
+    'Collect bags from Hotel Keihan Yodoyabashi front desk',
+    'Then: Yodoyabashi → Midosuji Line → <strong>Umeda Station</strong> · 1 stop · 2 min'
+  ]},
+  {time:'19:00',type:'transport',h:'🚄 Osaka Station → Kyoto (JR Kyoto Line Special Rapid)',items:[
+    'From <strong>Osaka Station</strong> (connected to Umeda — follow JR signs upstairs)',
+    'Platform 9, 10, or 11 → <strong>JR Kyoto Line Special Rapid (新快速 Shinkaisoku)</strong> direction Kyoto/Maibara',
+    '⚠️ Make sure it says SPECIAL RAPID — regular trains stop at every station and take longer',
+    'Osaka → <strong>Kyoto Station</strong> · ~28 min · ¥580',
+    'Trains run every 10–15 min'
+  ]},
+  {time:'20:00',type:'hotel',h:'🏨 Kyoto — Hotel Check-In',items:['Drop bags, freshen up · Kyoto evening awaits!']},
+  {time:'20:30',type:'transport',h:'🚃 Kyoto Station → Gion District (Keihan Line)',items:[
+    'Kyoto Station → walk 5 min east/south to <strong>Tofukuji Station (Keihan Line)</strong>',
+    'OR: From Kyoto Station → <strong>Bus 100 or 206</strong> from Bus Terminal D2 → "Gion" bus stop · ~15 min · ¥230',
+    'Fastest: Kyoto Station → <strong>Keihan Main Line</strong> → <strong>Shijo Station</strong> · ~5 min · ¥210',
+    'Shijo Station Exit 6 → walk east ~10 min → <strong>Hanamikoji Street (Gion)</strong>'
+  ]},
+  {time:'20:30',type:'activity',h:'👘 Gion — Kyoto\'s Geisha Quarter at Night',items:['Hanamikoji Street — traditional machiya townhouses lit by paper lanterns','Walk slowly · Look for maiko (apprentice geisha) in the evening 🎎','Very atmospheric — feels like stepping back in time']},
+  {time:'21:30',type:'food',h:'🏮 Pontocho Alley — Dinner',items:['Narrow lantern-lit alley running parallel to the Kamo River — walk north from Shijo along the river','Mix of traditional kaiseki, izakayas & bars · One of the most beautiful dinner streets in Japan 🍶']}
+ ]
+},
+
+{day:5,date:'April 24',city:'kyoto',cityLabel:'Kyoto',
+ title:'Arashiyama · Bamboo Grove · Boat Ride · Kimono & Tea 🎋',
+ sub:'6 AM Bamboo Grove · Boat Ride · Maikoya Kimono · Nishiki Market',
+ route:[
+  {time:'05:45',emoji:'🚂',name:'Kyoto Stn → Arashiyama (JR Sagano)'},
+  {conn:{icon:T.train,label:'15 min'}},
+  {time:'06:00',emoji:'🎋',name:'Bamboo Grove'},
+  {conn:{icon:T.walk,label:'5 min'}},
+  {time:'07:00',emoji:'🛕',name:'Tenryu-ji'},
+  {conn:{icon:T.boat,label:'~2 hrs'}},
+  {time:'09:00',emoji:'⛵',name:'Hozugawa Boat Ride'},
+  {conn:{icon:T.walk,label:'5 min'}},
+  {time:'11:30',emoji:'🌉',name:'Togetsukyo Bridge'},
+  {conn:{icon:T.walk,label:'10 min'}},
+  {time:'12:00',emoji:'⛩️',name:'Otagi Nenbutsuji'},
+  {conn:{icon:T.train,label:'JR Sagano'}},
+  {time:'13:30',emoji:'🚂',name:'Kyoto Stn'},
+  {conn:{icon:T.metro,label:'Karasuma Line'}},
+  {time:'14:00',emoji:'👘',name:'Maikoya (Shijo Stn)'},
+  {conn:{icon:T.walk,label:'10 min'}},
+  {time:'17:00',emoji:'⚔️',name:'Samurai Museum'},
+  {conn:{icon:T.walk,label:'10 min'}},
+  {time:'19:00',emoji:'🐟',name:'Nishiki Market'}
+ ],
+ tl:[
+  {time:'05:40',type:'transport',h:'🚂 Hotel → Arashiyama (JR Sagano Line)',items:[
+    'Head to <strong>Kyoto Station</strong> · JR San-in/Sagano Line departure from <strong>Platform 33 or 34</strong>',
+    'Kyoto → <strong>Saga-Arashiyama Station</strong> · 3 stops (Nijo → Hanazono → Saga-Arashiyama) · ~15 min · ¥240',
+    'Trains run from ~5:30 AM — check schedule the night before',
+    'From Saga-Arashiyama Station: <strong>walk north 5 min</strong> → Bamboo Grove entrance'
+  ]},
+  {time:'06:00',type:'activity',h:'🎋 ⭐ Arashiyama Bamboo Grove — ARRIVE AT 6 AM',items:['Serene, misty and magical at dawn — crowds arrive after 9 AM','Best photography light 6:00–7:30 AM — golden hour through the bamboo']},
+  {time:'07:00',type:'activity',h:'🛕 Tenryu-ji Temple + Hozugawa River Boat Ride',items:['Tenryu-ji: UNESCO Zen garden with borrowed mountain scenery backdrop','Hozugawa Boat Ride (~2 hrs): ~16 km scenic river from Kameoka through dramatic gorges']},
+  {time:'11:30',type:'activity',h:'🌉 Togetsukyo Bridge + Otagi Nenbutsuji',items:['"Moon Crossing Bridge" — classic Arashiyama shot over the Oi River','Otagi Nenbutsuji: 1,200 unique stone Buddha statues hidden in the forest']},
+  {time:'13:00',type:'transport',h:'🚂 Arashiyama → Kyoto Station → Maikoya',items:[
+    'Saga-Arashiyama Station → <strong>JR Sagano Line</strong> → Kyoto Station · ~15 min · ¥240',
+    'Kyoto Station → <strong>Karasuma Line (subway, K, green)</strong> → <strong>Shijo Station</strong> · 3 stops · ~5 min · ¥220',
+    '<strong>Maikoya</strong> is near Karasuma-Shijo intersection — 3 min walk from Shijo Station Exit 5'
+  ]},
+  {time:'14:00',type:'activity',h:'👘 Kimono + Tea Ceremony at Maikoya (Karasuma Shijo)',items:['Dress in a traditional kimono and participate in a Japanese tea ceremony','Highly recommended cultural experience in the heart of Kyoto']},
+  {time:'17:00',type:'activity',h:'⚔️ Samurai & Ninja Museum Kyoto',items:['Interactive museum — try on armour, learn ninja & samurai history · Fun for photos!']},
+  {time:'19:00',type:'food',h:"🐟 Nishiki Market — Kyoto's Kitchen Street",items:["400-year-old covered market · 100+ food stalls","Try: Kyoto pickles (tsukemono) · Fresh tofu · Matcha sweets · Grilled skewers"]}
+ ]
+},
+
+{day:6,date:'April 25',city:'kyoto',cityLabel:'Kyoto → Nagoya',
+ title:'Fushimi Inari Dawn · Sake District → Night Shinkansen to Nagoya ⛩️',
+ sub:'6 AM Torii Gates · Sake Museum · Kyoto Hotel Checkout · 9:30 PM Nagoya',
+ route:[
+  {time:'05:50',emoji:'🚂',name:'Kyoto Stn → Inari (JR Nara Line)'},
+  {conn:{icon:T.train,label:'5 min'}},
+  {time:'06:00',emoji:'⛩️',name:'Fushimi Inari Taisha'},
+  {conn:{icon:T.walk,label:'20 min walk'}},
+  {time:'08:30',emoji:'🍶',name:'Fushimi Sake District'},
+  {conn:{icon:T.walk,label:'5 min'}},
+  {time:'10:00',emoji:'🏛️',name:'Gekkeikan Museum'},
+  {conn:{icon:T.free,label:'Optional'}},
+  {time:'11:30',emoji:'⛵',name:'Canal Boat (optional)'},
+  {conn:{icon:T.train,label:'JR → Kyoto Stn'}},
+  {time:'14:00',emoji:'🧳',name:'Hotel Checkout (Kyoto)'},
+  {conn:{icon:T.free,label:'Rest & Explore'}},
+  {time:'21:15',emoji:'🚄',name:'Kyoto Stn → Nagoya (Shinkansen)'}
+ ],
+ tl:[
+  {time:'05:50',type:'transport',h:'🚂 Hotel → Fushimi Inari (JR Nara Line · 5 min!)',items:[
+    'Head to <strong>Kyoto Station</strong> · <strong>JR Nara Line</strong> from <strong>Platform 8 or 9</strong>',
+    'Kyoto → <strong>Inari Station</strong> · 2 stops · ~5 min · ¥150',
+    'This is the CLOSEST, CHEAPEST and FASTEST route to Fushimi Inari',
+    'Exit the station → walk 1 min → you\'re at the main torii gate ⛩️'
+  ]},
+  {time:'06:00',type:'activity',h:'⛩️ ⭐ Fushimi Inari Taisha — Go at DAWN',items:['Thousands of orange torii gates winding up the mountain','Misty, crowd-free and magical at 6 AM · Walk as far up as you like — even 30 min is stunning','By 9 AM it fills with tour groups — going early is the key!']},
+  {time:'08:00',type:'transport',h:'🚶 Walk from Fushimi Inari → Fushimi Sake District',items:[
+    'Walk south ~20 min along the canal path from Fushimi Inari → Fushimi-Momoyama area (the sake district)',
+    'OR: Inari Station → JR → Momoyama Station · 1 stop · 2 min · ¥150'
+  ]},
+  {time:'08:30',type:'activity',h:'🍶 Fushimi Sake District + Gekkeikan Museum',items:["Willow-lined canals, old sake breweries, traditional merchant townhouses","Gekkeikan Okura Sake Museum: inside a 350-year-old brewery · Tasting included · Entry ¥600","Fushimi Jikkokubune Canal Boat Ride (optional): 30-min flat-bottom wooden boat — very scenic"]},
+  {time:'12:00',type:'transport',h:'🚂 Fushimi → Kyoto Station (collect bags, rest)',items:[
+    'Momoyama/Tofukuji → <strong>JR Nara Line</strong> → Kyoto Station · ~10 min · ¥200',
+    'OR: <strong>Keihan Main Line</strong> from Fushimi-Momoyama Station → Shijo → Kyoto'
+  ]},
+  {time:'14:00',type:'luggage',h:'🧳 Kyoto Hotel — Checkout & Bag Storage',items:[
+    'Check out of your Kyoto hotel',
+    'If your train is late evening: ask hotel to hold bags until departure (free)',
+    'OR use <strong>Kyoto Station coin lockers</strong> or the staffed <strong>Cloak Room</strong> (near Central exit, B1) · ¥600–800/day',
+    'Explore Kyoto freely until the evening without your bags'
+  ]},
+  {time:'~21:15',type:'transport',h:'🚄 Kyoto Station → Nagoya (Shinkansen Nozomi)',items:[
+    'Kyoto Station → <strong>Shinkansen platforms 11–14</strong>',
+    'Train: <strong>Nozomi</strong> (fastest) · Kyoto → <strong>Nagoya Station</strong> · ~35 min · ¥5,640',
+    'Nagoya Station: follow signs to your hotel (KURETAKE INN NAGOYA HISAYAODORI is ~5–10 min walk from station)'
+  ]},
+  {time:'22:00',type:'hotel',h:'🏨 KURETAKE INN NAGOYA HISAYAODORI — Check In',items:['Rest well — Takayama tour departs 8:00 AM sharp tomorrow!']}
+ ]
+},
+
+{day:7,date:'April 26',city:'nagoya',cityLabel:'Nagoya',
+ title:'Takayama & Shirakawa-go Full Day Tour 🏔️',
+ sub:'⚠️ Meet 7:50 AM · Nagoya Ekinishi Police Box · Wonder Tour Flag',
+ route:[
+  {time:'07:45',emoji:'🚶',name:'Hotel → Nagoya Stn West Exit'},
+  {conn:{icon:T.walk,label:'5–10 min'}},
+  {time:'07:50',emoji:'⚠️',name:'Meeting: Ekinishi Police Box'},
+  {conn:{icon:T.bus,label:'~2.5 hrs'}},
+  {time:'10:30',emoji:'🏘️',name:'Takayama Old Town'},
+  {conn:{icon:T.bus,label:'~45 min'}},
+  {time:'13:00',emoji:'🏠',name:'Shirakawa-go'},
+  {conn:{icon:T.bus,label:'~2.5 hrs'}},
+  {time:'19:30',emoji:'🚉',name:'Return: Nagoya Station'}
+ ],
+ tl:[
+  {time:'07:30',type:'transport',h:'🚶 Hotel → Nagoya Station West Exit (~5–10 min walk)',items:[
+    'Walk to <strong>Nagoya Station West Exit (Nishi-guchi)</strong>',
+    'Most hotels in the KURETAKE INN area are within 5–10 min walk of the station',
+    'Alternatively: taxi ¥500–800'
+  ]},
+  {time:'07:50',type:'warning',h:'⚠️ Meeting Point — ARRIVE BY 7:50 AM',items:[
+    '📍 <strong>Nagoya Ekinishi Police Box</strong> (police box at the West Exit of Nagoya Station)',
+    'Your guide holds a <strong>Wonder Tour flag</strong> — no prior contact will be made',
+    '⏰ Arrive 10 minutes before departure — guide leaves at 8:00 AM sharp',
+    '❌ Latecomers and no-shows are NOT eligible for a refund'
+  ]},
+  {time:'08:00',type:'booking',h:'🚌 Takayama & Shirakawa-go Day Tour — DEPARTS',items:['Full-day guided tour · English commentary · Bus journey ~2.5 hrs','<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1195415&k_site=https%3A%2F%2Fwww.klook.com%2Fen-IN%2Factivity%2F15800-takayama-shirakawa-go-day-trip-nagoya%2F" target="_blank">🎫 Book via Klook</a>']},
+  {time:'10:30',type:'activity',h:'🏘️ Takayama — Preserved Edo-Era Old Town',items:["Japan's best-preserved merchant town — looks like feudal Japan","Sanmachi Suji historic district: sake breweries, craft shops & cafés","Try: Hida beef skewers · Mitarashi dango · Local sake tasting"]},
+  {time:'13:00',type:'activity',h:'🏠 Shirakawa-go — UNESCO Thatched Farmhouses',items:['Iconic gassho-zukuri A-frame thatched farmhouses in a mountain valley','UNESCO World Heritage Site — looks like a fairy tale','Observation deck: stunning panoramic view of the entire village']},
+  {time:'19:30',type:'transport',h:'🚉 Tour Returns to Nagoya Station',items:['Make your own way back to hotel from Nagoya Station','Pack bags tonight — transferring to Hakone tomorrow morning!']}
+ ]
+},
+
+{day:8,date:'April 27',city:'hakone',cityLabel:'Nagoya → Hakone',
+ title:'Owakudani · Pirate Ship · Open Air Museum · Onsen Ryokan ♨️',
+ sub:'Shinkansen to Odawara · Hakone Freepass · Ropeway · Lake Ashi',
+ route:[
+  {time:'Morning',emoji:'🧳',name:'Hotel Checkout Nagoya'},
+  {conn:{icon:T.shink,label:'~55 min Nozomi'}},
+  {time:'09:30',emoji:'🚉',name:'Odawara Stn (Freepass here!)'},
+  {conn:{icon:T.train,label:'15 min Tozan'}},
+  {time:'10:00',emoji:'🚂',name:'Hakone-Yumoto'},
+  {conn:{icon:T.cable,label:'Tozan + Ropeway'}},
+  {time:'11:00',emoji:'🚠',name:'Owakudani (volcanic valley)'},
+  {conn:{icon:T.cable,label:'25 min Ropeway'}},
+  {time:'12:00',emoji:'🛳️',name:'Togendai (Pirate Ship Pier)'},
+  {conn:{icon:T.ferry,label:'~40 min cruise'}},
+  {time:'13:00',emoji:'🍽️',name:'Lunch (Moto-Hakone)'},
+  {conn:{icon:T.bus,label:'~20 min'}},
+  {time:'14:30',emoji:'🎨',name:'Open Air Museum (Chokoku-no-Mori Stn)'},
+  {conn:{icon:T.train,label:'Tozan'}},
+  {time:'16:30',emoji:'♨️',name:'Onsen Ryokan'},
+  {conn:{icon:T.train,label:'Evening ride'}},
+  {time:'20:00',emoji:'🚂',name:'Hakone Tozan Railway (night)'}
+ ],
+ tl:[
+  {time:'Morning',type:'luggage',h:'🧳 Checkout Hotel + Head to Nagoya Station',items:['Check out and head to Nagoya Station (5–10 min walk or taxi)']},
+  {time:'Morning',type:'transport',h:'🚄 Nagoya → Odawara (Shinkansen Nozomi)',items:[
+    'Nagoya Station → <strong>Shinkansen Nozomi</strong> (direction Tokyo, Platforms 14–15)',
+    'Nagoya → <strong>Odawara Station</strong> · ~55 min · ¥4,510',
+    '⚠️ <strong>Get off at Odawara — NOT Tokyo!</strong>'
+  ]},
+  {time:'09:30',type:'luggage',h:'🎫 Pick Up Hakone Freepass at Odawara Station',items:[
+    '⭐ <strong>Buy Hakone Freepass at Odakyu counter</strong> — located at <strong>Odakyu Odawara Station (West side)</strong>',
+    'The Freepass covers: Hakone Tozan Railway · Ropeway · Pirate Ship cruise · Buses within Hakone',
+    '2-day pass ¥6,100 (from Odawara) — easily saves you money',
+    '<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1230992&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F821-hakone-transport-day-pass-tokyo%2F" target="_blank">🎫 Or pre-buy on Klook</a>'
+  ]},
+  {time:'09:45',type:'transport',h:'🚂 Odawara → Owakudani (Hakone Tozan Railway + Ropeway)',items:[
+    'Odawara Station → <strong>Hakone Tozan Railway</strong> (Platform 11 inside Odawara Stn) → <strong>Hakone-Yumoto</strong> · 15 min',
+    'Hakone-Yumoto → Hakone Tozan Railway continues → <strong>Gora Station</strong> · ~45 min scenic mountain switchback railway (spectacular!)',
+    'Gora → <strong>Hakone Tozan Cable Car</strong> (funicular) → <strong>Sounzan</strong> · ~10 min',
+    'Sounzan → <strong>Hakone Ropeway</strong> → <strong>Owakudani Station</strong> · ~15 min',
+    'All covered by Hakone Freepass! ✓'
+  ]},
+  {time:'10:30',type:'activity',h:'🚠 Owakudani — Volcanic Valley',items:['Active volcanic valley with sulphur vents & steaming craters — dramatic!','Try the famous <strong>kuro-tamago</strong> (black eggs boiled in volcanic springs!) — said to add 7 years to your life 🥚']},
+  {time:'11:30',type:'transport',h:'🚠 Owakudani → Togendai (Pirate Ship Pier)',items:[
+    'Continue on <strong>Hakone Ropeway</strong> from Owakudani → <strong>Togendai Station</strong> · ~25 min · Covered by Freepass',
+    'Walk 2 min to <strong>Togendai Pier</strong>'
+  ]},
+  {time:'12:00',type:'booking',h:'🛳️ Pirate Ship Cruise — Lake Ashi',items:['Ornate pirate-themed ferry across beautiful Lake Ashi · ~40 min','On a clear day: stunning view of snow-capped Mt. Fuji! · Covered by Freepass']},
+  {time:'13:00',type:'food',h:'🍽️ Lunch — Moto-Hakone or Hakone-machi',items:['Lakeside restaurants · Hakone soba is the local specialty · Beautiful lake views from the terrace']},
+  {time:'14:30',type:'transport',h:'🚌 Lunch → Open Air Museum (Hakone Tozan Bus)',items:[
+    'Take <strong>Hakone Tozan Bus</strong> (Line T or direction Hakone-Yumoto) → <strong>Chokoku-no-Mori Bus Stop</strong> · ~20 min · Covered by Freepass',
+    'OR: Walk to Moto-Hakone Pier → take bus toward Yumoto'
+  ]},
+  {time:'14:30',type:'activity',h:'🎨 Hakone Open Air Museum (1:30–4:30 PM)',items:['Incredible sculpture park with Picasso gallery, Rodin pieces & sweeping mountain views','One of the best open-air art museums in Japan · Allow 2–3 hrs']},
+  {time:'16:30',type:'hotel',h:'♨️ Onsen Ryokan — Check In',items:['Traditional Japanese inn: tatami mats, yukata robes, kaiseki dinner','Enjoy the onsen hot spring bath — incredibly relaxing 🛁 · Soak away the travel fatigue']},
+  {time:'20:00',type:'activity',h:'🚂 Hakone Tozan Railway Evening Ride (Optional)',items:["Japan's steepest mountain switchback railway at night — scenic & unique experience"]}
+ ]
+},
+
+{day:9,date:'April 28',city:'kawaguchiko',cityLabel:'Hakone → Kawaguchiko',
+ title:'Kawaguchiko · Chureita Pagoda · Lake Fuji Views 🗻',
+ sub:'Transfer via Gotemba · Hotel Mifujein · Iconic Pagoda Views',
+ route:[
+  {time:'Morning',emoji:'🚌',name:'Hakone-Yumoto → Kawaguchiko Bus'},
+  {conn:{icon:T.bus,label:'~90 min'}},
+  {time:'10:00',emoji:'🧳',name:'Hotel Mifujein (check in / drop bags)'},
+  {conn:{icon:T.train,label:'Fujikyu'}},
+  {time:'11:00',emoji:'⛩️',name:'Shimoyoshida Stn → Chureita Pagoda'},
+  {conn:{icon:T.walk,label:'25 min walk + 398 steps'}},
+  {time:'13:00',emoji:'🛍️',name:'Honcho Street (lunch & shops)'},
+  {conn:{icon:T.bus,label:'10 min'}},
+  {time:'14:30',emoji:'🌸',name:'Oishi Park'},
+  {conn:{icon:T.walk,label:'10 min'}},
+  {time:'16:00',emoji:'🗻',name:'Lake Kawaguchi (sunset)'}
+ ],
+ tl:[
+  {time:'Morning',type:'transport',h:'🚌 Hakone → Kawaguchiko (~90 min)',items:[
+    'Option A (recommended): Take a <strong>Fujikyu Highway Bus</strong> from <strong>Hakone-Yumoto Station Bus Terminal</strong> → <strong>Kawaguchiko Station</strong> · ~90 min · ¥2,000 · Book at the bus terminal or via Klook',
+    'Option B: Hakone-Yumoto → Odawara (Tozan Train, 15 min) → Gotemba (JR, 35 min) → Kawaguchiko (Fujikyu Bus, 40 min) · Total ~90 min',
+    'Note: No direct train — bus is the easiest option'
+  ]},
+  {time:'10:00',type:'luggage',h:'🧳 Hotel Mifujein — Drop Bags',items:['Check in or leave bags at reception if room not ready','Hotel Mifujein is near Kawaguchiko Station — very convenient location']},
+  {time:'10:30',type:'transport',h:'🚂 Kawaguchiko → Chureita Pagoda (Fujikyu Railway)',items:[
+    'Kawaguchiko Station → <strong>Fujikyu Railway (Kawaguchiko Line)</strong> → <strong>Shimoyoshida Station</strong> · ~15 min · ¥250',
+    'From Shimoyoshida Station: walk ~25 min uphill through the town → Sengen Shrine → then <strong>398 stone steps</strong> up to <strong>Chureita Pagoda</strong>',
+    '⏱ Allow ~45 min total walk + climb'
+  ]},
+  {time:'11:00',type:'activity',h:'⛩️ ⭐ Chureita Pagoda — The Iconic Japan Shot',items:["Japan's most famous photo: five-storey pagoda with Mt. Fuji framed behind it",'398 stone steps up — worth every step! Early morning or late afternoon = best light','Check the weather forecast the night before — cloud-free mornings are key! 🗻']},
+  {time:'13:00',type:'food',h:'🛍️ Honcho Street — Lunch & Local Shops',items:['Kawaguchiko\'s main street · Local cafés & Fuji-themed souvenirs · Try lake fish dishes']},
+  {time:'14:00',type:'transport',h:'🚌 Kawaguchiko Retro Bus → Oishi Park',items:[
+    'Take the <strong>Kawaguchiko Retro Bus (Ike Bus)</strong> from Kawaguchiko Station area → <strong>Oishi Park</strong> · ~10 min · ¥500 for day pass',
+    'Very scenic lakeside ride with Fuji views'
+  ]},
+  {time:'14:30',type:'activity',h:'🌸 Oishi Park + Lake Kawaguchiko Sunset',items:["Lakeside park with one of the best direct Mt. Fuji views — spectacular on clear days","Lavender and flowers in season · Walk along the lake shore","Gorgeous reflections of Fuji in the still water at dusk 🌅"]}
+ ]
+},
+
+{day:10,date:'April 29',city:'tokyo',cityLabel:'Kawaguchiko → Tokyo',
+ title:'Return to Tokyo · Asakusa · Akihabara · Ginza · Sumo 8:30 PM 🗼',
+ sub:'Morning Bus to Shinjuku · Hotel Other Space Asakusa · Sumo Show 20:30',
+ route:[
+  {time:'Morning',emoji:'🚌',name:'Kawaguchiko → Shinjuku (bus)'},
+  {conn:{icon:T.bus,label:'~2 hrs'}},
+  {time:'11:00',emoji:'🏨',name:'Other Space Asakusa (hotel)'},
+  {conn:{icon:T.tram,label:'Tsukuba Exp'}},
+  {time:'13:00',emoji:'🎮',name:'Akihabara (TE03)'},
+  {conn:{icon:T.metro,label:'JR + Ginza Line'}},
+  {time:'16:00',emoji:'💎',name:'Ginza'},
+  {conn:{icon:T.metro,label:'Ginza Line'}},
+  {time:'19:30',emoji:'🍽️',name:'Dinner (Asakusa)'},
+  {conn:{icon:T.walk,label:'5 min'}},
+  {time:'20:30',emoji:'🥊',name:'Sumo Club (Asakusa)'}
+ ],
+ tl:[
+  {time:'Morning',type:'transport',h:'🚌 Kawaguchiko → Tokyo Shinjuku Bus Terminal',items:[
+    '<strong>Kawaguchiko Station Bus Terminal</strong> → <strong>Fujikyu Highway Bus</strong> → <strong>Shinjuku Expressway Bus Terminal (Busta Shinjuku)</strong> · ~2 hrs · ¥2,000',
+    '⚠️ Book the bus the day before at Kawaguchiko Station or on the Fujikyu website — it fills up!',
+    'Very scenic journey through Fuji Five Lakes area',
+    'Busta Shinjuku is directly above <strong>Shinjuku Station (South Exit)</strong>'
+  ]},
+  {time:'11:00',type:'transport',h:'🚇 Shinjuku → Hotel Other Space Asakusa',items:[
+    'Shinjuku Station → <strong>Toei Oedo Line (E, purple)</strong> (from Shinjuku Nishi-guchi Station, a 3-min walk) → <strong>Asakusa Station</strong> · ~12 stops · ~22 min · ¥280',
+    'OR: Shinjuku → <strong>JR Sobu Line</strong> → Akihabara → <strong>Tsukuba Express (TX)</strong> → Asakusa · ~25 min',
+    '<strong>Hotel Other Space Asakusa</strong> — check in and drop bags'
+  ]},
+  {time:'11:30',type:'activity',h:'🏯 Asakusa District — Explore the Area',items:["Senso-ji Temple · Nakamise-dori shopping street · Hoppy Street for food","Asakusa is your home base for Days 10–12 — great to know the area well"]},
+  {time:'13:00',type:'transport',h:'🚃 Asakusa → Akihabara (Tsukuba Express · 4 min!)',items:[
+    'Asakusa Station → <strong>Tsukuba Express (TX, teal)</strong> → <strong>Akihabara Station (TE03)</strong> · 2 stops · ~4 min · ¥210',
+    'This is the fastest and most direct route — much easier than other options!'
+  ]},
+  {time:'13:00',type:'activity',h:'🎮 Akihabara — Electric Town',items:["Tokyo's legendary electronics, anime, manga & gaming district","Multi-storey electronics stores (Yodobashi Camera, Sofmap) · Retro game shops · Anime merchandise","Great for gadgets, collectibles & unique Tokyo souvenirs"]},
+  {time:'15:30',type:'transport',h:'🚂 Akihabara → Ginza',items:[
+    'Akihabara Station → <strong>JR Yamanote Line</strong> → Tokyo Station · 2 stops · ~5 min',
+    'Tokyo Station → <strong>Tokyo Metro Ginza Line (G, orange)</strong> → <strong>Ginza Station</strong> · 1 stop · ~2 min · ¥170',
+    'OR: Akihabara → <strong>Hibiya Line (H, silver)</strong> → Ginza · ~10 min · direct!'
+  ]},
+  {time:'16:00',type:'activity',h:'💎 Ginza District — Elegant Evening Stroll',items:["Tokyo's most upscale area — luxury boutiques, galleries, fine dining","Itoya (incredible stationery store) · Ginza Six · Tsukiji Outer Market ~10 min walk for a snack"]},
+  {time:'18:30',type:'transport',h:'🚇 Ginza → Asakusa (for dinner + Sumo)',items:[
+    'Ginza → <strong>Tokyo Metro Ginza Line (G)</strong> direction Asakusa → <strong>Asakusa Station</strong> · 9 stops · ~12 min · ¥200',
+    'Asakusa Sumo Club is IN Asakusa — walk from hotel/dinner, no need for extra transport!'
+  ]},
+  {time:'19:00',type:'food',h:'🍽️ Early Dinner Before Sumo — Asakusa Area',items:['Have dinner before the show — chankonabe sumo stew is served at the show but eat light','Hoppy Street (izakaya row) near Senso-ji is great for a pre-show drink & snack']},
+  {time:'20:30',type:'booking',h:'🥊 Asakusa Sumo Club — Sumo Show (8:30 PM Sharp!)',items:['Live sumo wrestling show + <strong>Chankonabe</strong> (sumo hot pot stew) meal included','<a class="tl-link" href="https://affiliate.klook.com/redirect?aid=78212&aff_adid=1230992&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F109994-asakusa-sumo-club-sumo-show-admission-chankonabe-tokyo%2F" target="_blank">🎫 Book via Klook</a>']}
+ ]
+},
+
+{day:11,date:'April 30',city:'tokyo',cityLabel:'Tokyo',
+ title:'Kamakura Day Trip — Great Buddha · Bamboo Temple · Beach 🛕',
+ sub:'Toei Asakusa Line → Shinagawa → JR Yokosuka Line → Kamakura',
+ route:[
+  {time:'08:15',emoji:'🚂',name:'Asakusa Stn (Toei Asakusa Line)'},
+  {conn:{icon:T.train,label:'~35 min'}},
+  {time:'09:00',emoji:'🚉',name:'Shinagawa Stn'},
+  {conn:{icon:T.train,label:'~40 min JR Yokosuka'}},
+  {time:'09:45',emoji:'🛕',name:'Kamakura Stn'},
+  {conn:{icon:T.walk,label:'5 min'}},
+  {time:'09:50',emoji:'🛍️',name:'Komachi-dori'},
+  {conn:{icon:T.walk,label:'10 min'}},
+  {time:'10:30',emoji:'⛩️',name:'Tsurugaoka Hachimangu'},
+  {conn:{icon:T.train,label:'Enoden 3 stops'}},
+  {time:'12:00',emoji:'🗿',name:'Hase Stn → Great Buddha'},
+  {conn:{icon:T.bus,label:'Bus #23'}},
+  {time:'13:30',emoji:'🎋',name:'Hokokuji Temple'},
+  {conn:{icon:T.walk,label:'15 min'}},
+  {time:'15:00',emoji:'⛩️',name:'Sasuke Inari'},
+  {conn:{icon:T.train,label:'Enoden'}},
+  {time:'16:30',emoji:'🏖️',name:'Yuigahama Beach (Enoden)'}
+ ],
+ tl:[
+  {time:'08:15',type:'transport',h:'🚂 Asakusa → Kamakura (Toei Asakusa Line + JR Yokosuka)',items:[
+    'Asakusa Station → <strong>Toei Asakusa Line (A, pink)</strong> (Keikyu direct through service) direction Keikyu-Kurihama',
+    'Board trains marked <strong>"Keikyu" or "Special Rapid" at Platform 1 or 2</strong>',
+    'Asakusa → <strong>Shinagawa Station</strong> · ~35 min · ¥480',
+    'Shinagawa Station → <strong>JR Yokosuka Line</strong> (Platform 7 or 8, blue/white trains, direction Kurihama/Zushi) → <strong>Kamakura Station</strong> · ~40 min · ¥680',
+    'Total Asakusa → Kamakura: ~75 min · Total fare: ~¥1,160 · IC card works throughout'
+  ]},
+  {time:'09:50',type:'activity',h:'🛍️ Komachi-dori Street — Charming Entry Lane',items:['Immediately west of Kamakura Station — leads to the main shrine','Local snacks, pottery, leather goods & Kamakura deer motif souvenirs']},
+  {time:'10:30',type:'activity',h:'⛩️ Tsurugaoka Hachimangu Shrine',items:["Kamakura's most important shrine — grand staircase, lotus ponds & beautiful grounds","Walk straight north from Kamakura Station on Wakamiya-oji Avenue (~5 min)"]},
+  {time:'11:30',type:'transport',h:'🚃 Kamakura → Great Buddha (Enoden)',items:[
+    'Kamakura Station → <strong>Enoden (Enoshima Electric Railway)</strong> Platform 1 → <strong>Hase Station</strong> · 3 stops · ~7 min · ¥260',
+    'From Hase Station: walk 5–7 min west → <strong>Kotoku-in (Great Buddha)</strong>'
+  ]},
+  {time:'12:00',type:'activity',h:'🗿 Kotoku-in — Great Buddha of Kamakura ⭐',items:["Iconic 13.35 m bronze Buddha (Kotoku-in Daibutsu) — one of Japan's most iconic sights","You can go INSIDE the statue through small doors (¥20 extra!) · Entry ¥300"]},
+  {time:'13:00',type:'transport',h:'🚌 Hase → Hokokuji Temple (Bus #23)',items:[
+    'From Hase Station area: take <strong>Bus #23</strong> from Kamakura Station East Exit (or Hase) → <strong>Jomyo-ji stop</strong> · ~10–15 min · ¥230',
+    'Walk 5 min from bus stop → <strong>Hokokuji Temple</strong> (Bamboo Temple)'
+  ]},
+  {time:'13:30',type:'activity',h:'🎋 Hokokuji Temple — The Bamboo Temple',items:["Stunning bamboo grove in a temple garden — unique & less crowded than Arashiyama","Matcha tea served in the bamboo grove · Entry ¥500 · A hidden gem!"]},
+  {time:'14:30',type:'activity',h:'⛩️ Sasuke Inari Shrine',items:['15 min walk north from Kamakura Station OR short taxi ¥600','Small mountain shrine with mini torii gates and stone fox statues — very atmospheric']},
+  {time:'16:00',type:'transport',h:'🚃 Kamakura → Yuigahama Beach (Enoden)',items:[
+    'Kamakura Station → <strong>Enoden</strong> → <strong>Yuigahama Station</strong> · 2 stops · ~5 min · ¥200'
+  ]},
+  {time:'16:30',type:'activity',h:'🏖️ Yuigahama Beach — Afternoon Wind-Down',items:["Relaxed beach with sea views — beautiful way to end the Kamakura day","Watch the sunset over the Pacific · Beach cafés for a final drink 🌅"]},
+  {time:'18:00',type:'transport',h:'🚂 Kamakura → Asakusa (Return)',items:[
+    'Kamakura → <strong>JR Yokosuka Line</strong> → Shinagawa · ~40 min',
+    'Shinagawa → <strong>Keikyu Main Line</strong> (direct through service to Toei Asakusa Line) → Asakusa · ~35 min',
+    'Total: ~75 min · Trains run frequently'
+  ]}
+ ]
+},
+
+{day:12,date:'May 1',city:'tokyo',cityLabel:'Tokyo',
+ title:'Departure Day — Fly Home to India ✈️',
+ sub:'Hotel Checkout · Airport Transfer · Last Japan Moments',
+ route:[
+  {time:'Morning',emoji:'🏨',name:'Other Space Asakusa (checkout)'},
+  {conn:{icon:T.train,label:'to airport'}},
+  {time:'2hrs before',emoji:'🧳',name:'Airport (Narita or Haneda)'},
+  {conn:{icon:T.flight,label:'Fly home!'}},
+  {time:'Evening',emoji:'🏠',name:'India'}
+ ],
+ tl:[
+  {time:'Morning',type:'hotel',h:'🏨 Hotel Checkout — Other Space Asakusa',items:['Pack up & check out · Last chance for a conbini breakfast or Asakusa matcha!']},
+  {time:'As needed',type:'transport',h:'🚂 Asakusa → Airport — Full Routes',items:[
+    '<strong>TO NARITA AIRPORT:</strong>',
+    'Option A (fastest): Asakusa Station → <strong>Toei Asakusa Line (Keikyu Direct Service)</strong> → Nishi-Magome → continues as <strong>Keikyu Narita</strong> direction → <strong>Narita Airport T1 or T2</strong> · ~90 min · ¥1,270–1,470 · IC card OK',
+    'Option B: Asakusa → metro → Tokyo Station → <strong>N\'EX (Narita Express)</strong> → Narita T1 · ~60 min from Tokyo Station · ¥3,070 (more expensive but comfortable)',
+    '<strong>TO HANEDA AIRPORT:</strong>',
+    'Asakusa Station → <strong>Toei Asakusa Line (Keikyu Direct)</strong> → <strong>Haneda Airport</strong> · ~40 min · ¥620 · Very convenient!',
+    '⏰ Arrive at the airport at least <strong>3 hours before</strong> your international departure for immigration + security'
+  ]},
+  {time:'Departure',type:'flight',h:'✈️ Fly Home — What an Incredible 12 Days! 🌸',items:['Tokyo · Osaka · Nara · Kyoto · Nagoya · Takayama · Hakone · Kawaguchiko · Kamakura','Bamboo groves · Bullet trains · Onsen under the stars · Mt. Fuji views · Lifetime memories 🗻']}
+ ]
+}
+];
+
+const bookings=[
+ {icon:'🌆',name:'Shibuya Sky Observatory',day:'Day 1 · Apr 20',city:'Tokyo',plat:'Direct',link:'https://www.shibuya-scramble-square.com/sky/ticket/'},
+ {icon:'🎨',name:'Teamlab Borderless Tokyo — Azabudai Hills (8:30 AM)',day:'Day 2 · Apr 21',city:'Tokyo',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F20707-teamlab-borderless-admission-ticket-tokyo%2F'},
+ {icon:'🏯',name:'Osaka Castle E-Ticket',day:'Day 2 · Apr 21',city:'Osaka',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F30110-osaka-castle-ticket%2F'},
+ {icon:'🌃',name:'Umeda Sky Building Observatory',day:'Day 3 · Apr 22',city:'Osaka',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F35861-umeda-sky-building-kuchu-teien-observatory-ticket%2F'},
+ {icon:'🌸',name:'teamLab Botanical Garden Osaka',day:'Day 3 · Apr 22',city:'Osaka',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F73632-teamlab-botanical-garden-osaka%2F'},
+ {icon:'🐠',name:'Osaka Aquarium Kaiyukan E-Ticket',day:'Day 4 · Apr 23',city:'Osaka',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1225814&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F598-osaka-aquarium-kaiyukan-japan%2F'},
+ {icon:'🏔️',name:'Takayama & Shirakawa-go Day Tour from Nagoya',day:'Day 7 · Apr 26',city:'Nagoya',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1195415&k_site=https%3A%2F%2Fwww.klook.com%2Fen-IN%2Factivity%2F15800-takayama-shirakawa-go-day-trip-nagoya%2F'},
+ {icon:'🚠',name:'Hakone Freepass (2-Day Transport)',day:'Day 8 · Apr 27',city:'Hakone',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1230992&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F821-hakone-transport-day-pass-tokyo%2F'},
+ {icon:'🥊',name:'Asakusa Sumo Show + Chankonabe (8:30 PM)',day:'Day 10 · Apr 29',city:'Tokyo',plat:'Klook',link:'https://affiliate.klook.com/redirect?aid=78212&aff_adid=1230992&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F109994-asakusa-sumo-club-sumo-show-admission-chankonabe-tokyo%2F'},
+];
+
+const tips=[
+ {icon:'💳',title:'Suica / Pasmo IC Card',text:'Buy at the airport immediately upon landing. Load ¥5,000 to start. Works on ALL metro, JR, Toei, private lines — plus convenience stores and coin lockers. One card for the whole trip.'},
+ {icon:'🧳',title:'Luggage Storage Know-How',text:'Day 2: store bags at Tokyo Station coin lockers (Yaesu B1F, ¥700 large). Day 4: leave bags at Hotel Keihan Yodoyabashi all day before collecting for the Kyoto evening train. Day 6: Kyoto Station Cloak Room or hotel storage before the night Shinkansen. Always take a photo of your locker number!'},
+ {icon:'🚂',title:'Key Lines to Remember',text:'Tokyo: Ginza Line (orange, G) • Hibiya Line (silver, H) • Sobu-Chuo (yellow, JR) • Yamanote Loop (green, JR). Osaka: Midosuji Line (red, M) • Tanimachi Line (purple, T). Kyoto: JR Nara Line for Fushimi Inari (5 min!), JR Sagano for Arashiyama.'},
+ {icon:'⚠️',title:'Important: Kintetsu Namba vs Namba Subway',text:'Day 3 — to go to Nara, you need OSAKA-NAMBA Station (Kintetsu), NOT the regular Namba subway station. They\'re 3 min apart. Look for the Kintetsu signs underground. Don\'t board from the wrong station or you\'ll end up going the wrong direction.'},
+ {icon:'🎟️',title:'Hakone Freepass',text:'Buy the Hakone Freepass at Odakyu Odawara Station (not at Nagoya!) right after getting off the Shinkansen. It covers Tozan Railway, cable car, ropeway, pirate ship AND buses. Pre-buying on Klook is also fine and avoids queuing.'},
+ {icon:'📸',title:'Morning Magic — Go Early',text:'Fushimi Inari at 6 AM = misty gates with zero tourists. Arashiyama Bamboo Grove at 6 AM = pure magic. Meiji Shrine early = peaceful and crowd-free. By 9 AM these spots are packed with tour groups.'},
+ {icon:'⚠️',title:'Takayama Tour — Don\'t Be Late!',text:'Meet at the Nagoya Ekinishi Police Box (Nagoya Station West Exit) at 7:50 AM. Look for the Wonder Tour flag. No refund for latecomers. Set 2 alarms the night before just in case!'},
+ {icon:'🍜',title:'JR Special Rapid (Shinkaisoku) to Kyoto',text:'Day 4: take the JR Kyoto Line SPECIAL RAPID (新快速) from Osaka Station to Kyoto. Only 28 min and ¥580. Make sure it says 新快速 on the board — regular trains stop everywhere and take 45+ min.'},
+ {icon:'♨️',title:'Onsen Etiquette',text:'Remove ALL clothing — swimwear is not worn. Rinse thoroughly at the shower stations first before entering the bath. Tattoos may be restricted at some facilities. The ryokan will have a yukata robe in your room to wear around the inn.'},
+ {icon:'🚌',title:'Kawaguchiko Bus Booking',text:'Day 10: Book your Kawaguchiko → Shinjuku Fujikyu Highway Bus the day before at the station. It fills up fast, especially in the morning. ¥2,000 for a beautiful 2-hour scenic ride. Can also book online via Fujikyu website.'},
+ {icon:'📱',title:'Useful Apps to Download',text:'Google Maps (download offline Tokyo, Osaka, Kyoto maps!) • Google Translate (camera mode is lifesaving for menus and signs) • Navitime Japan for train routes • Klook for booking. Screenshots of your itinerary = offline backup.'},
+ {icon:'🛍️',title:'Shopping Highlights by City',text:'Tokyo: Harajuku Takeshita St (quirky) · Akihabara (electronics/anime) · Ginza (luxury). Osaka: Shinsaibashi (fashion) · Kuromon (food). Kyoto: Nishiki Market (food/crafts). Kamakura: Komachi-dori (handcraft souvenirs).'},
+];
+
+function buildRoute(route){
+  return `<div class="route-row">${route.map(item=>{
+    if(item.conn) return `<div class="rconn"><div class="rconn-line"><div class="rconn-dash"></div><div class="rconn-icon">${item.conn.icon}</div><div class="rconn-dash"></div></div><div class="rconn-label">${item.conn.label}</div></div>`;
+    const lug=item.name&&item.name.includes('bag')||item.name&&item.name.includes('Luggage')||item.name&&item.name.includes('Lockers')?'luggage-stop':'';
+    return `<div class="rnode"><div class="rnode-time">${item.time}</div><div class="rnode-circle ${lug}">${item.emoji}</div><div class="rnode-name">${item.name}</div></div>`;
+  }).join('')}</div>`;
+}
+
+function buildTL(tl){
+  return tl.map((item)=>{
+    const body=item.items?`<ul>${item.items.map(x=>`<li>${x}</li>`).join('')}</ul>`:'';
+    return `<div class="tl-item">
+      <div class="tl-left"><div class="tl-time">${item.time}</div><div class="tl-dot ${item.type||'activity'}"></div><div class="tl-line"></div></div>
+      <div class="tl-right"><div class="tl-sec ${item.type||'activity'}"><div class="tl-h">${item.h}</div>${body}</div></div>
+    </div>`;
+  }).join('');
+}
+
+function renderDays(){
+  document.getElementById('days-wrap').innerHTML=days.map(d=>`
+    <div class="day-card" data-city="${d.city}" id="dc-${d.day}">
+      <div class="day-hd" onclick="toggle(${d.day})">
+        <div class="hd-l">
+          <div class="day-num">Day ${d.day} &nbsp;·&nbsp; ${d.date}</div>
+          <div class="day-title">${d.title}</div>
+          <div class="day-sub">${d.sub}</div>
+        </div>
+        <div class="hd-r"><span class="city-pill">${d.cityLabel}</span><span class="chev">⌄</span></div>
+      </div>
+      <div class="day-body">
+        <div class="route-map"><div class="route-title">📍 Day ${d.day} Route — Station by Station</div>${buildRoute(d.route)}</div>
+        <div class="day-inner">${buildTL(d.tl)}</div>
+      </div>
+    </div>`).join('');
+}
+
+function renderBookings(){
+  document.getElementById('bk-wrap').innerHTML=bookings.map(b=>`
+    <div class="bk-item">
+      <div class="bk-icon">${b.icon}</div>
+      <div class="bk-info">
+        <div class="bk-name">${b.name}</div>
+        <div class="bk-meta"><span>📅 ${b.day}</span><span>📍 ${b.city}</span><span class="plat-tag">${b.plat}</span></div>
+      </div>
+      <a class="bk-link" href="${b.link}" target="_blank">🎫 Book</a>
+    </div>`).join('');
+}
+
+function renderTips(){
+  document.getElementById('tips-wrap').innerHTML=tips.map(t=>`
+    <div class="tip-card"><span class="tip-icon">${t.icon}</span><div><h4>${t.title}</h4><p>${t.text}</p></div></div>`).join('');
+}
+
+function toggle(n){const el=document.getElementById(`dc-${n}`);el.classList.toggle('open');}
+
+function switchSc(sc,e){
+  e.stopPropagation();
+  document.querySelectorAll('.sc-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.sc-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById('sc-'+sc).classList.add('active');
+  e.currentTarget.classList.add('active');
+}
+
+document.querySelectorAll('.nav-tab').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('panel-'+btn.dataset.tab).classList.add('active');
+    document.getElementById('cityBar').style.display=btn.dataset.tab==='itinerary'?'flex':'none';
+  });
+});
+
+document.querySelectorAll('.city-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.city-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const city=btn.dataset.city;
+    const w=document.getElementById('wrap-1');
+    if(w) w.style.display=(city==='all'||city==='tokyo')?'block':'none';
+    document.querySelectorAll('.day-card').forEach(card=>{
+      card.classList.toggle('hidden',city!=='all'&&card.dataset.city!==city);
+    });
+  });
+});
+
+(function(){
+  const hero=document.querySelector('.hero');
+  for(let i=0;i<24;i++){
+    const p=document.createElement('div');
+    p.className='petal';
+    const s=Math.random()*9+5;
+    p.style.cssText=`left:${Math.random()*100}%;width:${s}px;height:${s}px;animation-duration:${Math.random()*8+4}s;animation-delay:${Math.random()*9}s;opacity:${Math.random()*.4+.1};background:hsla(${Math.random()*25+318},80%,78%,.6)`;
+    hero.appendChild(p);
+  }
+})();
+
+renderDays();renderBookings();renderTips();
+document.getElementById('dc-2').classList.add('open');
+</script>
+</body>
+</html>
